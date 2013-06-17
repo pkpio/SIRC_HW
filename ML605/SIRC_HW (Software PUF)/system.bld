@@ -1,0 +1,71 @@
+Release 13.2 ngdbuild O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc ML605.ucf -p
+xc6vlx240t-ff1156-1 system.ngc system.ngd
+
+Reading NGO file "C:/Users/praveen/Xilinx work/Dropbox/Rice Internship
+work/Farinaz - Low power high speed PUFs/PUF testing code/SIRC_HW/ML605/SIRC_HW
+(Software PUF)/system.ngc" ...
+Loading design module "ipcore_dir/blk_mem_gen_inputMem.ngc"...
+Loading design module "ipcore_dir/blk_mem_gen_paramReg.ngc"...
+Loading design module "ipcore_dir/blk_mem_gen_outputMem.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "ML605.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'clk_200', used in period specification
+   'TS_CLK_200', was traced into PLL_ADV instance clkBPLL. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT0: <TIMESPEC TS_clk_125_eth_i = PERIOD "clk_125_eth_i" TS_CLK_200 /
+   0.625 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'clk_200', used in period specification
+   'TS_CLK_200', was traced into PLL_ADV instance clkBPLL. The following new TNM
+   groups and period specifications were generated at the PLL_ADV output(s): 
+   CLKOUT1: <TIMESPEC TS_clk_user_interface_i = PERIOD "clk_user_interface_i"
+   TS_CLK_200 / 0.833333333 HIGH 50%>
+
+WARNING:NgdBuild:1345 - The constraint <TIMESPEC "TS_userRunClearToggle" = FROM
+   "userRunClearTogUS" TO "userRunClearTogCS" 8000 ps DATAPATHONLY;>
+   [ML605.ucf(244)] is overridden by the constraint <TIMESPEC
+   "TS_userRunClearToggle" = FROM "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps
+   DATAPATHONLY;> [ML605.ucf(247)]. The overriden constraint usually comes from
+   the input netlist or ncf files. Please set XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR
+   to promote this message to an error.
+WARNING:NgdBuild:1345 - The constraint <TIMESPEC "TS_userRunClearToggle" = FROM
+   "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps DATAPATHONLY;>
+   [ML605.ucf(247)] is overridden by the constraint <TIMESPEC
+   "TS_userRunClearToggle" = FROM "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps
+   DATAPATHONLY;> [ML605.ucf(251)]. The overriden constraint usually comes from
+   the input netlist or ncf files. Please set XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR
+   to promote this message to an error.
+Done...
+
+Checking expanded design ...
+WARNING:NgdBuild:488 - Attribute value "CLKFBOUT" is not an accepted value for
+   attribute "CLK_FEEDBACK" on "clkBPLL".
+WARNING:NgdBuild:488 - Attribute value "CLKFBOUT" is not an accepted value for
+   attribute "CLK_FEEDBACK" on "E2M/EC/clkBPLL".
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   4
+
+Total memory usage is 187888 kilobytes
+
+Writing NGD file "system.ngd" ...
+Total REAL time to NGDBUILD completion:  9 sec
+Total CPU time to NGDBUILD completion:   9 sec
+
+Writing NGDBUILD log file "system.bld"...

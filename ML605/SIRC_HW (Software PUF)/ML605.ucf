@@ -1,0 +1,258 @@
+# Ken Eguro
+//		Version 1.1 - 8/1/11
+
+CONFIG PART = 6vlx240tff1156-1;
+ 
+# ************ IO pin mappings
+# System clock
+Net CLK_200N  LOC = "H9" | IOSTANDARD = LVDS_25;
+Net CLK_200P  LOC = "J9" | IOSTANDARD = LVDS_25;
+
+INST "RESET"	LOC = "H10" | IOSTANDARD = SSTL15;  #CPU reset button - active high
+
+# GMII pins for EMAC0
+INST "GMII_TXD_0<?>"		IOSTANDARD = LVCMOS25;
+INST "GMII_TXD_0<7>"		LOC = "AF11";
+INST "GMII_TXD_0<6>"		LOC = "AE11";
+INST "GMII_TXD_0<5>"		LOC = "AM10";
+INST "GMII_TXD_0<4>"		LOC = "AL10";
+INST "GMII_TXD_0<3>"		LOC = "AG11";
+INST "GMII_TXD_0<2>"		LOC = "AG10";
+INST "GMII_TXD_0<1>"		LOC = "AL11";
+INST "GMII_TXD_0<0>"		LOC = "AM11";
+INST "GMII_TX_EN_0"		LOC = "AJ10" | IOSTANDARD = LVCMOS25;
+INST "GMII_TX_ER_0"		LOC = "AH10" | IOSTANDARD = LVCMOS25;
+INST "GMII_GTX_CLK_0"	LOC = "AH12" | IOSTANDARD = LVCMOS25;
+INST "GMII_RXD_0<?>"		IOSTANDARD = LVCMOS25;
+INST "GMII_RXD_0<7>"		LOC = "AC13";
+INST "GMII_RXD_0<6>"		LOC = "AC12";
+INST "GMII_RXD_0<5>"		LOC = "AD11";
+INST "GMII_RXD_0<4>"		LOC = "AM12";
+INST "GMII_RXD_0<3>"		LOC = "AN12";
+INST "GMII_RXD_0<2>"		LOC = "AE14";
+INST "GMII_RXD_0<1>"		LOC = "AF14";
+INST "GMII_RXD_0<0>"		LOC = "AN13";
+INST "GMII_RX_DV_0"		LOC = "AM13" | IOSTANDARD = LVCMOS25;
+INST "GMII_RX_ER_0"		LOC = "AG12" | IOSTANDARD = LVCMOS25;
+INST "GMII_RX_CLK_0"		LOC = "AP11" | IOSTANDARD = LVCMOS25; 
+INST "GMII_RESET_B"		LOC = "AH13" | IOSTANDARD = LVCMOS25;
+
+# System ACE pins
+Net sysACE_CLK  	LOC = AE16 | IOSTANDARD = LVCMOS25;	#33 Mhz clock
+
+INST "sysACE_MPADD<?>"		IOSTANDARD = LVCMOS25;
+INST "sysACE_MPADD<0>"		LOC = "AC15";
+INST "sysACE_MPADD<1>"		LOC = "AP15";
+INST "sysACE_MPADD<2>"		LOC = "AG17";
+INST "sysACE_MPADD<3>"		LOC = "AH17";
+INST "sysACE_MPADD<4>"		LOC = "AG15";
+INST "sysACE_MPADD<5>"		LOC = "AF15";
+INST "sysACE_MPADD<6>"		LOC = "AK14";
+
+INST "sysACE_MPDATA<*>"		IOSTANDARD = LVCMOS25;
+INST "sysACE_MPDATA<0>"			LOC = "AM15";
+INST "sysACE_MPDATA<1>"			LOC = "AJ17";
+INST "sysACE_MPDATA<2>"			LOC = "AJ16";
+INST "sysACE_MPDATA<3>"			LOC = "AP16";
+INST "sysACE_MPDATA<4>"			LOC = "AG16";
+INST "sysACE_MPDATA<5>"			LOC = "AH15";
+INST "sysACE_MPDATA<6>"			LOC = "AF16";
+INST "sysACE_MPDATA<7>"			LOC = "AN15";
+
+INST "sysACE_MPCE"		LOC = "AJ14" | IOSTANDARD = LVCMOS25;
+INST "sysACE_MPWE"		LOC = "AL14" | IOSTANDARD = LVCMOS25;
+INST "sysACE_MPOE"		LOC = "AL15" | IOSTANDARD = LVCMOS25;
+#INST "sysACE_MPBRDY"		LOC = "AJ15" | IOSTANDARD = LVCMOS25;
+#INST "sysACE_MPIRQ"		LOC = "L9" | IOSTANDARD = LVCMOS25;
+
+#NET "LED<0>"	LOC = "AC22" | IOSTANDARD = LVCMOS25;	#LED 7
+#NET "LED<1>"	LOC = "AC24" | IOSTANDARD = LVCMOS25;	#LED 6
+#NET "LED<2>"	LOC = "AE22" | IOSTANDARD = LVCMOS25;	#LED 5
+#NET "LED<3>"	LOC = "AE23" | IOSTANDARD = LVCMOS25;	#LED 4
+#NET "LED<4>"	LOC = "AB23" | IOSTANDARD = LVCMOS25;	#LED 3
+#NET "LED<5>"	LOC = "AG23" | IOSTANDARD = LVCMOS25;	#LED 2
+#NET "LED<6>"	LOC = "AE24" | IOSTANDARD = LVCMOS25;	#LED 1
+#NET "LED<7>"	LOC = "AD24" | IOSTANDARD = LVCMOS25;	#LED 0
+
+# Locate the Tri-Mode Ethernet MAC instance
+#INST "*v6_emac" LOC = "TEMAC_X0Y0";
+
+# ************ Timing constraints
+# 125 MHz ethernet clock - 100 ps extra leeway
+NET "clk_125_eth" TNM_NET =  "clk_125_eth";
+TIMESPEC "TS_CLK_125" = PERIOD "clk_125_eth" 7900 ps HIGH 50%;
+
+# 200 MHz reference clock
+NET "clk_200" TNM_NET =  "clk_200";
+TIMESPEC "TS_CLK_200" = PERIOD "clk_200" 5000 ps HIGH 50%;
+
+# ************USER CLOCK
+# 167 MHz clock for user interface - 100 ps extra leeway
+NET "clk_user_interface" TNM_NET =  "clk_user_interface";
+TIMESPEC "TS_CLK_USER_INTERFACE" = PERIOD "clk_user_interface" 5888 ps HIGH 50%;
+
+# 33 MHz SystemACE clock - 100 ps extra
+NET "*sysACE_clk_o" TNM_NET =  "sysACE_clk_o";
+TIMESPEC "TS_sysACE_clk_o" = PERIOD "sysACE_clk_o" 30.200 ns HIGH 50%;
+
+# 30.3 (period) + 5.140 (phase difference) - 12(setup) = 23.44 slack
+NET "sysACE_MPWE" TNM_NET =  "sysACE_MPWE";
+TIMESPEC "TS_sysACE_WE" = FROM "sysACE_clk_o" TO "sysACE_MPWE" 23.44ns DATAPATHONLY; 
+NET "sysACE_MPOE" TNM_NET =  "sysACE_MPOE";
+TIMESPEC "TS_sysACE_OE" = FROM "sysACE_clk_o" TO "sysACE_MPOE" 23.44ns DATAPATHONLY;
+
+# 30.3 (period) + 5.140 (phase difference) - 4(setup) = 31.44 slack, so taken care of by normal period requirements
+#NET "sysACE_MPADD<*>" TNM_NET = "sysACE_MPADD";
+#TIMESPEC "TS_sysACE_MPADD" = FROM "sysACE_clk_o" TO "sysACE_MPADD" 31.44ns DATAPATHONLY; 
+
+# 30.3 - 5.140 (phase difference) - 22(clk->valid time) = 3.16 slack
+NET "sysACE_MPDATA<*>" TNM_NET =  "sysACE_MPDATA";
+TIMESPEC "TS_sysACE_MPDATAIN" = FROM "sysACE_MPDATA" TO "sysACE_clk_o" 3.16ns DATAPATHONLY;
+
+#This is necessary to be able to write/read the SystemACE registers every clock cycle.
+# The system operates at 33MHz, but the system 33 MHz clock is 180 deg out of phase with
+# the one provided to the SystemACE chip.  To reliably write to
+# the registers every clock cycle we need the WE and address lines to be valid 12/4ns before
+# the SystemACE clock edge.  When we read, we can't sample the output data until at least
+# 22ns after the SystemACE clock edge and the OE line needs to be valid 12ns before the SystemACE clock edge.
+# Thus, the timing diagram we want is something like this:
+# System ACE clock			___________|-----------|___________|-----------
+# Provided 33 MHz clock		-----------|___________|-----------|___________
+#											<---> The address and data should become valid 4 ns before the SystemACE clock edge
+#										<------> The WE/OE values should become valid 12 ns before the SystemACE clock edge
+# 													<---------------> The input data should not be sampled until 22ns after this SystemACE clock edge
+#
+#The PLL inside ethernetController.v shifts the provided 33 MHz clock 118.929 deg (10.009 ns ==> shifted clock leads SystemACE clock by 5.140ns)
+# System ACE clock			___________|-----------|___________|-----------
+# Provided 33 MHz clock		-----------|___________|-----------|___________
+# Shifted 33 MHz clock		_____|-----------|___________|-----------|_____
+#											<---> The address and data should become valid 4 ns before the SystemACE clock edge
+#										<------> The WE/OE values should become valid 12 ns before the SystemACE clock edge - taken care of by the output TC
+# 													<-------------> The input data should not be sampled until 22ns after this SystemACE clock edge - taken care of by the input TC
+#
+
+# Ethernet GTX_CLK high quality 125 MHz reference clock
+NET "*GMII_GTX_CLK*" TNM_NET = "ref_gtx_clk";
+TIMEGRP "emac_single_clk_ref_gtx" = "ref_gtx_clk";
+TIMESPEC "TS_emac_single_clk_ref_gtx" = PERIOD "emac_single_clk_ref_gtx" 8 ns HIGH 50 %;
+
+# Ethernet GMII PHY-side receive clock
+NET "*GMII_RX_CLK*" TNM_NET = "phy_clk_rx";
+TIMEGRP "emac_single_clk_phy_rx" = "phy_clk_rx";
+TIMESPEC "TS_emac_single_clk_phy_rx" = PERIOD "emac_single_clk_phy_rx" 7.5 ns HIGH 50 %;
+
+# Set the IDELAY values on the data inputs.
+# Please modify to suit your design.
+INST "*gmii?ideldv"    IDELAY_VALUE = 26;
+INST "*gmii?ideld0"    IDELAY_VALUE = 26;
+INST "*gmii?ideld1"    IDELAY_VALUE = 26;
+INST "*gmii?ideld2"    IDELAY_VALUE = 26;
+INST "*gmii?ideld3"    IDELAY_VALUE = 26;
+INST "*gmii?ideld4"    IDELAY_VALUE = 26;
+INST "*gmii?ideld5"    IDELAY_VALUE = 26;
+INST "*gmii?ideld6"    IDELAY_VALUE = 26;
+INST "*gmii?ideld7"    IDELAY_VALUE = 26;
+INST "*gmii?ideler"    IDELAY_VALUE = 26;
+
+# Group all IDELAY-related blocks to use a single IDELAYCTRL
+INST "*delayCtrl*" IODELAY_GROUP = gmii_idelay;
+INST "*ideld?"  IODELAY_GROUP = gmii_idelay;
+INST "*ideldv"  IODELAY_GROUP = gmii_idelay;
+INST "*ideler"  IODELAY_GROUP = gmii_idelay;
+#INST "*delayRXClk" IODELAY_GROUP = gmii_idelay;
+
+# The following constraints work in conjunction with IDELAY_VALUE settings to
+# check that the GMII receive bus remains in alignment with the rising edge of
+# GMII_RX_CLK, to within 2ns setup time and 0 hold time.
+#INST "GMII_RXD_0<?>" TNM = "gmii_rx";
+#INST "GMII_RX_DV_0"  TNM = "gmii_rx";
+#INST "GMII_RX_ER_0"  TNM = "gmii_rx";
+#TIMEGRP "gmii_rx" OFFSET = IN 2 ns VALID 1 ns BEFORE "GMII_RX_CLK_0" RISING;
+
+
+# Constrain the GMII physical interface flip-flops to IOBs
+INST "*gmii?RXD_TO_MAC*"  IOB = true;
+INST "*gmii?RX_DV_TO_MAC" IOB = true;
+INST "*gmii?RX_ER_TO_MAC" IOB = true;
+INST "*gmii?GMII_TXD_?"   IOB = true;
+INST "*gmii?GMII_TX_EN"   IOB = true;
+INST "*gmii?GMII_TX_ER"   IOB = true;
+
+# Locate the 125 MHz reference clock buffer
+#INST "bufCLK_125" LOC = "BUFGCTRL_X0Y6";
+
+##################################
+# LocalLink Level constraints
+##################################
+
+# LocalLink client FIFO transmit-side constraints
+# -----------------------------------------------------------------------------
+
+# Group the clock crossing signals into timing groups
+INST "*client_side_FIFO?tx_fifo_i?rd_tran_frame_tog"    TNM = "tx_fifo_rd_to_wr";
+INST "*client_side_FIFO?tx_fifo_i?rd_retran_frame_tog"  TNM = "tx_fifo_rd_to_wr";
+INST "*client_side_FIFO?tx_fifo_i?rd_col_window_pipe_1" TNM = "tx_fifo_rd_to_wr";
+INST "*client_side_FIFO?tx_fifo_i?rd_addr_txfer*"       TNM = "tx_fifo_rd_to_wr";
+INST "*client_side_FIFO?tx_fifo_i?rd_txfer_tog"         TNM = "tx_fifo_rd_to_wr";
+INST "*client_side_FIFO?tx_fifo_i?wr_frame_in_fifo"     TNM = "tx_fifo_wr_to_rd";
+
+TIMESPEC "TS_tx_fifo_rd_to_wr" = FROM "tx_fifo_rd_to_wr" TO "emac_single_clk_ref_gtx" 8 ns DATAPATHONLY;
+TIMESPEC "TS_tx_fifo_wr_to_rd" = FROM "tx_fifo_wr_to_rd" TO "emac_single_clk_ref_gtx" 8 ns DATAPATHONLY;
+
+# Reduce clock period to allow for metastability settling time
+INST "*client_side_FIFO?tx_fifo_i?wr_tran_frame_tog"    TNM = "tx_metastable";
+INST "*client_side_FIFO?tx_fifo_i?wr_rd_addr*"          TNM = "tx_metastable";
+INST "*client_side_FIFO?tx_fifo_i?wr_txfer_tog"         TNM = "tx_metastable";
+INST "*client_side_FIFO?tx_fifo_i?frame_in_fifo"        TNM = "tx_metastable";
+INST "*client_side_FIFO?tx_fifo_i?wr_retran_frame_tog*" TNM = "tx_metastable";
+INST "*client_side_FIFO?tx_fifo_i?wr_col_window_pipe_0" TNM = "tx_metastable";
+TIMESPEC "TS_tx_meta_protect" = FROM "tx_metastable" 5 ns DATAPATHONLY;
+
+# Transmit-side client FIFO address bus timing
+INST "*client_side_FIFO?tx_fifo_i?rd_addr_txfer*" TNM = "tx_addr_rd";
+INST "*client_side_FIFO?tx_fifo_i?wr_rd_addr*"    TNM = "tx_addr_wr";
+TIMESPEC "TS_tx_fifo_addr" = FROM "tx_addr_rd" TO "tx_addr_wr" 10 ns;
+
+# LocalLink client FIFO receive-side constraints
+# -----------------------------------------------------------------------------
+
+# Group the clock crossing signals into timing groups
+INST "*client_side_FIFO?rx_fifo_i?wr_store_frame_tog" TNM = "rx_fifo_wr_to_rd";
+INST "*client_side_FIFO?rx_fifo_i?rd_addr_gray*"      TNM = "rx_fifo_rd_to_wr";
+
+TIMESPEC "TS_rx_fifo_wr_to_rd" = FROM "rx_fifo_wr_to_rd" TO "emac_single_clk_ref_gtx" 8 ns DATAPATHONLY;
+TIMESPEC "TS_rx_fifo_rd_to_wr" = FROM "rx_fifo_rd_to_wr" TO "emac_single_clk_phy_rx"  8 ns DATAPATHONLY;
+
+# Reduce clock period to allow for metastability settling time
+INST "*client_side_FIFO?rx_fifo_i?wr_rd_addr_gray_sync*" TNM = "rx_metastable";
+INST "*client_side_FIFO?rx_fifo_i?rd_store_frame_tog"    TNM = "rx_metastable";
+TIMESPEC "TS_rx_meta_protect" = FROM "rx_metastable" 5 ns;
+
+
+# Essentially ignore timing on signals that cross between the user clock and ethernet clock domains
+# tx_max_output_address is written in the user clock domain but is read back in the ethernet clock domain
+# Ignoring the timing is OK since the write is gated by the userRun set of signals
+NET "*E2M/EC/tx_max_output_address<*>" 					TNM = "tx_max_output";
+NET "*E2M/EC/tx_curr_bytes_left<*>" 						TNM = "tx_max_output_target";
+NET "*E2M/EC/tx_header_buffer_len<*>" 						TNM = "tx_max_output_target";
+NET "*E2M/EC/tx_read_len<*>"									TNM = "tx_max_output_target";
+NET "*E2M/EC/*tx_packet_payload*"							TNM = "tx_max_output_target";
+TIMESPEC "TS_tx_max_output_1" = FROM "tx_max_output" TO "tx_max_output_target" 8000 ps DATAPATHONLY;
+# These are the various userRun signals that need to cross the clock domains
+NET "*E2M/EC/userRunClearToggle"							TNM = "userRunClearTogUS";
+NET "*E2M/EC/userRunClearToggleControllerSide<1>"	TNM = "userRunClearTogCS";
+TIMESPEC "TS_userRunClearToggle" = FROM "userRunClearTogUS" TO "userRunClearTogCS" 8000 ps DATAPATHONLY;
+NET "*E2M/EC/userRunRegisterSetToggle"					TNM = "userRunSetTogCS";
+NET "*E2M/EC/userRunRegisterSetToggleUserSide<1>"	TNM = "userRunSetTogUS";
+TIMESPEC "TS_userRunClearToggle" = FROM "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps DATAPATHONLY;
+# These are the signals need to do a soft reset that need to cross the clock domains
+NET "*E2M/EC/softResetToggle"								TNM = "softResetCS";
+NET "*E2M/EC/softResetToggleUserSide<1>"				TNM = "softResetUS";
+TIMESPEC "TS_userRunClearToggle" = FROM "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps DATAPATHONLY;
+
+# The slow hard reset line is not considered synchronous, but we make synchronous internal resets
+# The exact timing doens't matter, but I have to put something in if I don't want to use a TIG.
+NET "*E2M/delayCtrl0Reset*"								TNM = "hard_reset";
+TIMESPEC "TS_hard_reset_IG" = FROM "hard_reset" TO FFS 8000 ps DATAPATHONLY;
+TIMESPEC "TS_hard_reset_IG2" = FROM "hard_reset" TO RAMS 8000 ps DATAPATHONLY;
+TIMESPEC "TS_hard_reset_IG3" = FROM "hard_reset" TO CPUS 8000 ps DATAPATHONLY;

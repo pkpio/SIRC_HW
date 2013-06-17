@@ -1,0 +1,2213 @@
+Release 13.2 - xst O.61xd (nt64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Reading design: system.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "system.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "system"
+Output Format                      : NGC
+Target Device                      : xc6vlx240t-1-ff1156
+
+---- Source Options
+Top Module Name                    : system
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\emac_single\example_design\physical\gmii_if.v\" into library work
+Parsing module <gmii_if>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\emac_single\example_design\emac_single.v\" into library work
+Parsing module <emac_single>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\emac_single\example_design\client\fifo\tx_client_fifo_8.v\" into library work
+Parsing module <tx_client_fifo_8>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\emac_single\example_design\client\fifo\rx_client_fifo_8.v\" into library work
+Parsing module <rx_client_fifo_8>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\emac_single\example_design\emac_single_block.v\" into library work
+Parsing module <emac_single_block>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\emac_single\example_design\client\fifo\eth_fifo_8.v\" into library work
+Parsing module <eth_fifo_8>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\blk_mem_gen_paramReg.v\" into library work
+Parsing module <blk_mem_gen_paramReg>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\blk_mem_gen_outputMem.v\" into library work
+Parsing module <blk_mem_gen_outputMem>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\blk_mem_gen_inputMem.v\" into library work
+Parsing module <blk_mem_gen_inputMem>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\iobuf.v\" into library work
+Parsing module <iobuf16>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\fifo36Wrapper.v\" into library work
+Parsing module <fifo36Wrapper>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\serialTransmitReceive.v\" into library work
+Parsing module <serialTransmitReceive>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\emac_single\example_design\emac_single_locallink.v\" into library work
+Parsing module <emac_single_locallink>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v\" into library work
+Parsing module <ethernetController>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\simpleTestModuleOne.v\" into library work
+Parsing module <simpleTestModuleOne>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernet2BlockMem.v\" into library work
+Parsing module <ethernet2BlockMem>.
+Analyzing Verilog file \"C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\system.v\" into library work
+Parsing module <system>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\system.v" Line 133: Port CLKOUT2 is not connected to this instance
+
+Elaborating module <system>.
+
+Elaborating module <IBUF>.
+
+Elaborating module <IBUFGDS>.
+
+Elaborating module <PLL_BASE(COMPENSATION="SYSTEM_SYNCHRONOUS",BANDWIDTH="OPTIMIZED",CLKFBOUT_MULT=5,DIVCLK_DIVIDE=1,CLKFBOUT_PHASE=0.0,REF_JITTER=0.1,CLKIN_PERIOD=5.0,CLKOUT0_DIVIDE=8,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=6,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5)>.
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:1016 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernet2BlockMem.v" Line 169: Port EMACCLIENTRXDVLD is not connected to this instance
+
+Elaborating module <ethernet2BlockMem(INMEM_USER_BYTE_WIDTH=1,OUTMEM_USER_BYTE_WIDTH=1,INMEM_USER_ADDRESS_WIDTH=17,OUTMEM_USER_ADDRESS_WIDTH=13,INMEM_USER_REGISTER=1,MAC_ADDRESS=48'b101010101010101010101010101010101010101010101010)>.
+
+Elaborating module <IDELAYCTRL>.
+
+Elaborating module <emac_single_locallink>.
+
+Elaborating module <emac_single_block>.
+
+Elaborating module <gmii_if>.
+
+Elaborating module <ODDR>.
+
+Elaborating module <IODELAY(IDELAY_TYPE="FIXED",IDELAY_VALUE=0,HIGH_PERFORMANCE_MODE="TRUE")>.
+
+Elaborating module <emac_single>.
+
+Elaborating module
+<TEMAC_SINGLE(EMAC_PHYINITAUTONEG_ENABLE="FALSE",EMAC_PHYISOLATE="FALSE",EMAC_PHYLOOPBACKMSB="FALSE",EMAC_PHYPOWERDOWN="FALSE",EMAC_PHYRESET="TRUE",EMAC_GTLOOPBACK="FALSE",EMAC_UNIDIRECTION_ENABLE="FALSE",EMAC_LINKTIMERVAL=9'b0,EMAC_MDIO_IGNORE_PHYADZERO="FALSE",EMAC_MDIO_ENABLE="FALSE",EMAC_SPEED_LSB="FALSE",EMAC_SPEED_MSB="TRUE",EMAC_USECLKEN="FALSE",EMAC_BYTEPHY="FALSE",EMAC_RGMII_ENABLE="FALSE",EMAC_SGMII_ENABLE="FALSE",EMAC_1000BASEX_ENABLE="FALSE",EMAC_HOST_ENABLE="FALSE",EMAC_TX16BITCLIENT_ENABLE="FALSE",EMAC_RX16BITCLIENT_ENABLE="FALSE",EMAC_ADDRFILTER_ENABLE="FALSE",EMAC_LTCHECK_DISABLE="FALSE",EMAC_CTRLLENCHECK_DISABLE="FALSE",EMAC_RXFLOWCTRL_ENABLE="FALSE",EMAC_TXFLOWCTRL_ENABLE="FALSE",EMAC_TXRESET="FALSE",EMAC_TXJUMBOFRAME_ENABLE="FALSE",EMAC_TXINBANDFCS_ENABLE="FALSE",EMAC_TX_ENABLE="TRUE",EMAC_TXVLAN_ENABLE="FALSE",EMAC_TXHALFDUPLEX="FALSE",EMAC_TXIFGADJUST_ENABLE="FALSE",EMAC_RXRESET="FALSE",EMAC_RXJUMBOFRAME_ENABLE="FALSE",EMAC_RXINBANDFCS_ENABLE="FALSE",EMAC_RX_ENABLE="TRUE",EMAC_RXVLAN_ENAB
+LE="FALSE",EMAC_RXHALFDUPLEX="FALSE",EMAC_PAUSEADDR=48'b111111111110111011011101110011001011101110101010,EMAC_UNICASTADDR=48'b0,EMAC_DCRBASEADDR=8'b0)>.
+WARNING:HDLCompiler:1127 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\emac_single\example_design\emac_single_block.v" Line 280: Assignment to rx_client_clk_out_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\emac_single\example_design\emac_single_block.v" Line 293: Assignment to tx_client_clk_out_i ignored, since the identifier is never used
+
+Elaborating module <eth_fifo_8>.
+
+Elaborating module <tx_client_fifo_8(FULL_DUPLEX_ONLY=0)>.
+
+Elaborating module <RAMB36E1(DOB_REG=1,READ_WIDTH_A=9,READ_WIDTH_B=9,RSTREG_PRIORITY_B="RSTREG",SIM_COLLISION_CHECK="ALL",SRVAL_B=36'b0,WRITE_MODE_A="WRITE_FIRST",WRITE_MODE_B="WRITE_FIRST",WRITE_WIDTH_A=9,WRITE_WIDTH_B=9)>.
+
+Elaborating module <rx_client_fifo_8>.
+WARNING:HDLCompiler:1016 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1952: Port CLKOUT1 is not connected to this instance
+
+Elaborating module <ethernetController(INMEM_USER_BYTE_WIDTH=1,OUTMEM_USER_BYTE_WIDTH=1,INMEM_USER_ADDRESS_WIDTH=17,OUTMEM_USER_ADDRESS_WIDTH=13,INMEM_USER_REGISTER=1,MAC_ADDRESS=48'b101010101010101010101010101010101010101010101010)>.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 463: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 694: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 734: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 785: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 802: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 992: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1014: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1201: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1218: Result of 8-bit expression is truncated to fit in 7-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1450: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1486: Result of 32-bit expression is truncated to fit in 5-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1519: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1526: Result of 32-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1568: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1569: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1598: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1599: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1762: Result of 32-bit expression is truncated to fit in 1-bit target.
+
+Elaborating module <blk_mem_gen_inputMem>.
+WARNING:HDLCompiler:1499 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\blk_mem_gen_inputMem.v" Line 39: Empty module <blk_mem_gen_inputMem> remains a black box.
+
+Elaborating module <blk_mem_gen_outputMem>.
+WARNING:HDLCompiler:1499 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\blk_mem_gen_outputMem.v" Line 39: Empty module <blk_mem_gen_outputMem> remains a black box.
+
+Elaborating module <blk_mem_gen_paramReg>.
+WARNING:HDLCompiler:1499 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ipcore_dir\blk_mem_gen_paramReg.v" Line 39: Empty module <blk_mem_gen_paramReg> remains a black box.
+
+Elaborating module <iobuf16>.
+
+Elaborating module <IOBUF>.
+
+Elaborating module <PLL_BASE(COMPENSATION="SYSTEM_SYNCHRONOUS",BANDWIDTH="OPTIMIZED",CLKFBOUT_MULT=28,DIVCLK_DIVIDE=1,CLKFBOUT_PHASE=0,REF_JITTER=0.1,CLKIN_PERIOD=30.303,CLKOUT0_DIVIDE=28,CLKOUT0_PHASE=118.929,CLKOUT0_DUTY_CYCLE=0.5)>.
+
+Elaborating module <fifo36Wrapper>.
+
+Elaborating module <FIFO18_36(SIM_MODE="SAFE",ALMOST_FULL_OFFSET=12'b010000000,ALMOST_EMPTY_OFFSET=12'b010000000,DO_REG=1,EN_SYN="FALSE",FIRST_WORD_FALL_THROUGH="TRUE")>.
+WARNING:HDLCompiler:189 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1989: Size mismatch in connection of port <writeData>. Formal port size is 36-bit while actual signal size is 25-bit.
+WARNING:HDLCompiler:189 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 1993: Size mismatch in connection of port <readData>. Formal port size is 36-bit while actual signal size is 25-bit.
+WARNING:HDLCompiler:189 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 2001: Size mismatch in connection of port <writeData>. Formal port size is 36-bit while actual signal size is 23-bit.
+WARNING:HDLCompiler:189 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 2005: Size mismatch in connection of port <readData>. Formal port size is 36-bit while actual signal size is 23-bit.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\ethernetController.v" Line 2102: Result of 32-bit expression is truncated to fit in 3-bit target.
+
+Elaborating module <simpleTestModuleOne(INMEM_BYTE_WIDTH=1,OUTMEM_BYTE_WIDTH=1,INMEM_ADDRESS_WIDTH=17,OUTMEM_ADDRESS_WIDTH=13)>.
+WARNING:HDLCompiler:1127 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\simpleTestModuleOne.v" Line 182: Assignment to responseTopNot ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\simpleTestModuleOne.v" Line 239: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\simpleTestModuleOne.v" Line 276: Result of 18-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\simpleTestModuleOne.v" Line 291: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\simpleTestModuleOne.v" Line 296: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\simpleTestModuleOne.v" Line 341: Result of 14-bit expression is truncated to fit in 13-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\simpleTestModuleOne.v" Line 342: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\simpleTestModuleOne.v" Line 197: Assignment to regCount ignored, since the identifier is never used
+
+Elaborating module <serialTransmitReceive>.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\serialTransmitReceive.v" Line 109: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\serialTransmitReceive.v" Line 149: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\serialTransmitReceive.v" Line 162: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\serialTransmitReceive.v" Line 192: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\serialTransmitReceive.v" Line 131: Assignment to CAoutReg ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <system>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/system.v".
+        INMEM_USER_BYTE_WIDTH = 1
+        OUTMEM_USER_BYTE_WIDTH = 1
+        INMEM_USER_ADDRESS_WIDTH = 17
+        OUTMEM_USER_ADDRESS_WIDTH = 13
+        INMEM_USER_REGISTER = 1
+        MAC_ADDRESS = 48'b101010101010101010101010101010101010101010101010
+    Summary:
+	no macro.
+Unit <system> synthesized.
+
+Synthesizing Unit <ethernet2BlockMem>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ethernet2blockmem.v".
+        INMEM_USER_BYTE_WIDTH = 1
+        OUTMEM_USER_BYTE_WIDTH = 1
+        INMEM_USER_ADDRESS_WIDTH = 17
+        OUTMEM_USER_ADDRESS_WIDTH = 13
+        INMEM_USER_REGISTER = 1
+        MAC_ADDRESS = 48'b101010101010101010101010101010101010101010101010
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ethernet2blockmem.v" line 169: Output port <RX_LL_FIFO_STATUS> of the instance <emac_ll> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ethernet2blockmem.v" line 169: Output port <EMACCLIENTRXSTATS> of the instance <emac_ll> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ethernet2blockmem.v" line 169: Output port <TX_CLK_OUT> of the instance <emac_ll> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ethernet2blockmem.v" line 169: Output port <EMACCLIENTRXDVLD> of the instance <emac_ll> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ethernet2blockmem.v" line 169: Output port <EMACCLIENTRXFRAMEDROP> of the instance <emac_ll> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ethernet2blockmem.v" line 169: Output port <EMACCLIENTRXSTATSVLD> of the instance <emac_ll> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ethernet2blockmem.v" line 169: Output port <EMACCLIENTRXSTATSBYTEVLD> of the instance <emac_ll> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ethernet2blockmem.v" line 169: Output port <EMACCLIENTTXSTATS> of the instance <emac_ll> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ethernet2blockmem.v" line 169: Output port <EMACCLIENTTXSTATSVLD> of the instance <emac_ll> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ethernet2blockmem.v" line 169: Output port <EMACCLIENTTXSTATSBYTEVLD> of the instance <emac_ll> is unconnected or connected to loadless signal.
+    Found 13-bit register for signal <delayCtrl0Reset>.
+    Summary:
+	inferred  13 D-type flip-flop(s).
+Unit <ethernet2BlockMem> synthesized.
+
+Synthesizing Unit <emac_single_locallink>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ipcore_dir/emac_single/example_design/emac_single_locallink.v".
+    Set property "KEEP = TRUE" for signal <tx_data_i>.
+    Set property "KEEP = TRUE" for signal <rx_data_i>.
+    Set property "ASYNC_REG = TRUE" for signal <tx_pre_reset_i>.
+    Set property "ASYNC_REG = TRUE" for signal <rx_pre_reset_i>.
+    Set property "KEEP = TRUE" for signal <tx_data_valid_i>.
+    Set property "KEEP = TRUE" for signal <tx_ack_i>.
+    Set property "KEEP = TRUE" for signal <rx_data_valid_i>.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ipcore_dir/emac_single/example_design/emac_single_locallink.v" line 323: Output port <tx_fifo_status> of the instance <client_side_FIFO> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ipcore_dir/emac_single/example_design/emac_single_locallink.v" line 323: Output port <tx_overflow> of the instance <client_side_FIFO> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ipcore_dir/emac_single/example_design/emac_single_locallink.v" line 323: Output port <rx_overflow> of the instance <client_side_FIFO> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <tx_reset_i>.
+    Found 1-bit register for signal <rx_reset_i>.
+    Found 1-bit register for signal <rx_data_valid_r>.
+    Found 1-bit register for signal <rx_good_frame_r>.
+    Found 1-bit register for signal <rx_bad_frame_r>.
+    Found 6-bit register for signal <rx_pre_reset_i>.
+    Found 6-bit register for signal <tx_pre_reset_i>.
+    Found 8-bit register for signal <rx_data_r>.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal rx_data_valid_i may hinder XST clustering optimizations.
+    Summary:
+	inferred  25 D-type flip-flop(s).
+Unit <emac_single_locallink> synthesized.
+
+Synthesizing Unit <emac_single_block>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ipcore_dir/emac_single/example_design/emac_single_block.v".
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ipcore_dir/emac_single/example_design/emac_single_block.v" line 277: Output port <EMACCLIENTRXCLIENTCLKOUT> of the instance <emac_single_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ipcore_dir/emac_single/example_design/emac_single_block.v" line 277: Output port <EMACCLIENTRXDVLDMSW> of the instance <emac_single_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ipcore_dir/emac_single/example_design/emac_single_block.v" line 277: Output port <EMACCLIENTTXCLIENTCLKOUT> of the instance <emac_single_inst> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <emac_single_block> synthesized.
+
+Synthesizing Unit <gmii_if>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ipcore_dir/emac_single/example_design/physical/gmii_if.v".
+    Found 1-bit register for signal <GMII_TX_ER>.
+    Found 1-bit register for signal <RX_DV_TO_MAC>.
+    Found 1-bit register for signal <RX_ER_TO_MAC>.
+    Found 1-bit register for signal <GMII_TX_EN>.
+    Found 8-bit register for signal <GMII_TXD>.
+    Found 8-bit register for signal <RXD_TO_MAC>.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+Unit <gmii_if> synthesized.
+
+Synthesizing Unit <emac_single>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ipcore_dir/emac_single/example_design/emac_single.v".
+    Summary:
+	no macro.
+Unit <emac_single> synthesized.
+
+Synthesizing Unit <eth_fifo_8>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ipcore_dir/emac_single/example_design/client/fifo/eth_fifo_8.v".
+        FULL_DUPLEX_ONLY = 0
+    Summary:
+	no macro.
+Unit <eth_fifo_8> synthesized.
+
+Synthesizing Unit <tx_client_fifo_8>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ipcore_dir/emac_single/example_design/client/fifo/tx_client_fifo_8.v".
+        FULL_DUPLEX_ONLY = 0
+        IDLE_s = 4'b0000
+        QUEUE1_s = 4'b0001
+        QUEUE2_s = 4'b0010
+        QUEUE3_s = 4'b0011
+        QUEUE_ACK_s = 4'b0100
+        WAIT_ACK_s = 4'b0101
+        FRAME_s = 4'b0110
+        DROP_s = 4'b0111
+        RETRANSMIT_s = 4'b1000
+        WAIT_s = 2'b00
+        DATA_s = 2'b01
+        EOF_s = 2'b10
+        OVFLOW_s = 2'b11
+    Set property "ASYNC_REG = TRUE" for signal <wr_rd_addr>.
+    Set property "ASYNC_REG = TRUE" for signal <wr_col_window_pipe<0>>.
+    Set property "ASYNC_REG = TRUE" for signal <wr_col_window_pipe<1>>.
+    Set property "ASYNC_REG = TRUE" for signal <frame_in_fifo_sync>.
+    Set property "ASYNC_REG = TRUE" for signal <wr_tran_frame_tog>.
+    Set property "ASYNC_REG = TRUE" for signal <wr_retran_frame_tog>.
+    Set property "ASYNC_REG = TRUE" for signal <wr_txfer_tog>.
+    Found 1-bit register for signal <rd_enable_delay2>.
+    Found 2-bit register for signal <wr_state>.
+    Found 1-bit register for signal <wr_ovflow_dst_rdy>.
+    Found 1-bit register for signal <wr_eof_state_reg>.
+    Found 4-bit register for signal <rd_state>.
+    Found 8-bit register for signal <tx_data>.
+    Found 1-bit register for signal <tx_data_valid>.
+    Found 1-bit register for signal <rd_tran_frame_tog>.
+    Found 1-bit register for signal <wr_tran_frame_tog>.
+    Found 1-bit register for signal <wr_tran_frame_sync>.
+    Found 1-bit register for signal <wr_tran_frame_delay>.
+    Found 1-bit register for signal <wr_transmit_frame>.
+    Found 1-bit register for signal <rd_retran_frame_tog>.
+    Found 1-bit register for signal <wr_retran_frame_tog>.
+    Found 1-bit register for signal <wr_retran_frame_sync>.
+    Found 1-bit register for signal <wr_retran_frame_delay>.
+    Found 1-bit register for signal <wr_retransmit_frame>.
+    Found 9-bit register for signal <wr_frames>.
+    Found 1-bit register for signal <wr_frame_in_fifo>.
+    Found 1-bit register for signal <frame_in_fifo_sync>.
+    Found 1-bit register for signal <frame_in_fifo>.
+    Found 12-bit register for signal <wr_addr>.
+    Found 12-bit register for signal <wr_start_addr>.
+    Found 12-bit register for signal <rd_addr>.
+    Found 12-bit register for signal <rd_start_addr>.
+    Found 1-bit register for signal <rd_col_window_expire>.
+    Found 2-bit register for signal <rd_col_window_pipe>.
+    Found 10-bit register for signal <rd_slot_timer>.
+    Found 12-bit register for signal <rd_dec_addr>.
+    Found 1-bit register for signal <wr_data_pipe<0><7>>.
+    Found 1-bit register for signal <wr_data_pipe<0><6>>.
+    Found 1-bit register for signal <wr_data_pipe<0><5>>.
+    Found 1-bit register for signal <wr_data_pipe<0><4>>.
+    Found 1-bit register for signal <wr_data_pipe<0><3>>.
+    Found 1-bit register for signal <wr_data_pipe<0><2>>.
+    Found 1-bit register for signal <wr_data_pipe<0><1>>.
+    Found 1-bit register for signal <wr_data_pipe<0><0>>.
+    Found 1-bit register for signal <wr_data_pipe<1><7>>.
+    Found 1-bit register for signal <wr_data_pipe<1><6>>.
+    Found 1-bit register for signal <wr_data_pipe<1><5>>.
+    Found 1-bit register for signal <wr_data_pipe<1><4>>.
+    Found 1-bit register for signal <wr_data_pipe<1><3>>.
+    Found 1-bit register for signal <wr_data_pipe<1><2>>.
+    Found 1-bit register for signal <wr_data_pipe<1><1>>.
+    Found 1-bit register for signal <wr_data_pipe<1><0>>.
+    Found 8-bit register for signal <wr_data_bram>.
+    Found 1-bit register for signal <wr_sof_pipe<0>>.
+    Found 1-bit register for signal <wr_sof_pipe<1>>.
+    Found 2-bit register for signal <wr_accept_pipe>.
+    Found 1-bit register for signal <wr_accept_bram>.
+    Found 1-bit register for signal <wr_eof_pipe<0>>.
+    Found 1-bit register for signal <wr_eof_pipe<1>>.
+    Found 1-bit register for signal <wr_eof_bram>.
+    Found 8-bit register for signal <rd_data_pipe>.
+    Found 1-bit register for signal <rd_eof>.
+    Found 1-bit register for signal <rd_eof_reg>.
+    Found 1-bit register for signal <rd_drop_frame>.
+    Found 1-bit register for signal <rd_retransmit>.
+    Found 4-bit register for signal <rd_16_count>.
+    Found 12-bit register for signal <rd_addr_txfer>.
+    Found 1-bit register for signal <rd_txfer_tog>.
+    Found 1-bit register for signal <wr_txfer_tog>.
+    Found 1-bit register for signal <wr_txfer_tog_sync>.
+    Found 1-bit register for signal <wr_txfer_tog_delay>.
+    Found 12-bit register for signal <wr_rd_addr>.
+    Found 12-bit register for signal <wr_addr_diff>.
+    Found 1-bit register for signal <wr_fifo_full>.
+    Found 1-bit register for signal <wr_col_window_pipe<0>>.
+    Found 1-bit register for signal <wr_col_window_pipe<1>>.
+    Found 1-bit register for signal <wr_col_window_expire>.
+    Found 4-bit register for signal <wr_fifo_status>.
+    Found 1-bit register for signal <rd_enable_delay>.
+    Found finite state machine <FSM_0> for signal <wr_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 6                                              |
+    | Clock              | wr_clk (rising_edge)                           |
+    | Reset              | wr_sreset (positive)                           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <rd_state>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 21                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 13                                             |
+    | Clock              | rd_clk (rising_edge)                           |
+    | Reset              | rd_sreset (positive)                           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 9-bit subtractor for signal <wr_frames[8]_GND_16_o_sub_131_OUT> created at line 756.
+    Found 12-bit subtractor for signal <rd_addr[11]_GND_16_o_sub_176_OUT> created at line 860.
+    Found 12-bit subtractor for signal <rd_addr[11]_GND_16_o_sub_207_OUT> created at line 915.
+    Found 12-bit subtractor for signal <wr_rd_addr[11]_wr_addr[11]_sub_269_OUT> created at line 1082.
+    Found 9-bit adder for signal <wr_frames[8]_GND_16_o_add_126_OUT> created at line 752.
+    Found 9-bit adder for signal <wr_frames[8]_GND_16_o_add_128_OUT> created at line 754.
+    Found 12-bit adder for signal <wr_addr[11]_GND_16_o_add_146_OUT> created at line 801.
+    Found 12-bit adder for signal <rd_addr[11]_GND_16_o_add_164_OUT> created at line 851.
+    Found 10-bit adder for signal <rd_slot_timer[9]_GND_16_o_add_196_OUT> created at line 903.
+    Found 4-bit adder for signal <rd_16_count[3]_rd_16_count[3]_mux_242_OUT> created at line 1017.
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred 204 D-type flip-flop(s).
+	inferred  21 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <tx_client_fifo_8> synthesized.
+
+Synthesizing Unit <rx_client_fifo_8>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ipcore_dir/emac_single/example_design/client/fifo/rx_client_fifo_8.v".
+        WAIT_s = 3'b000
+        QUEUE1_s = 3'b001
+        QUEUE2_s = 3'b010
+        QUEUE3_s = 3'b011
+        QUEUE_SOF_s = 3'b100
+        SOF_s = 3'b101
+        DATA_s = 3'b110
+        EOF_s = 3'b111
+        IDLE_s = 3'b000
+        FRAME_s = 3'b001
+        END_s = 3'b010
+        GF_s = 3'b011
+        BF_s = 3'b100
+        OVFLOW_s = 3'b101
+    Set property "ASYNC_REG = TRUE" for signal <wr_rd_addr_gray_sync>.
+    Set property "ASYNC_REG = TRUE" for signal <rd_store_frame_tog>.
+    Found 3-bit register for signal <rd_valid_pipe>.
+    Found 1-bit register for signal <rd_sof_n_int>.
+    Found 1-bit register for signal <rd_eof_n_int>.
+    Found 8-bit register for signal <rd_data_out>.
+    Found 8-bit register for signal <rd_data_pipe>.
+    Found 1-bit register for signal <rd_src_rdy_n_int>.
+    Found 1-bit register for signal <frame_in_fifo>.
+    Found 1-bit register for signal <rd_store_frame_tog>.
+    Found 1-bit register for signal <rd_store_frame_sync>.
+    Found 1-bit register for signal <rd_store_frame_delay>.
+    Found 1-bit register for signal <rd_store_frame>.
+    Found 9-bit register for signal <rd_frames>.
+    Found 3-bit register for signal <wr_state>.
+    Found 1-bit register for signal <wr_store_frame_tog>.
+    Found 12-bit register for signal <wr_addr>.
+    Found 12-bit register for signal <wr_start_addr>.
+    Found 12-bit register for signal <rd_addr>.
+    Found 16-bit register for signal <n0219[15:0]>.
+    Found 8-bit register for signal <wr_data_bram>.
+    Found 2-bit register for signal <wr_dv_pipe>.
+    Found 1-bit register for signal <wr_eof_bram>.
+    Found 2-bit register for signal <wr_gf_pipe>.
+    Found 2-bit register for signal <wr_bf_pipe>.
+    Found 12-bit register for signal <rd_addr_gray>.
+    Found 12-bit register for signal <wr_rd_addr_gray_sync>.
+    Found 12-bit register for signal <wr_rd_addr_gray>.
+    Found 12-bit register for signal <wr_addr_diff>.
+    Found 1-bit register for signal <wr_fifo_full>.
+    Found 4-bit register for signal <wr_fifo_status>.
+    Found 3-bit register for signal <rd_state>.
+    Found finite state machine <FSM_2> for signal <wr_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 5                                              |
+    | Clock              | wr_clk (rising_edge)                           |
+    | Reset              | wr_sreset (positive)                           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_3> for signal <rd_state>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 15                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 11                                             |
+    | Clock              | rd_clk (rising_edge)                           |
+    | Reset              | rd_sreset (positive)                           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 9-bit subtractor for signal <rd_frames[8]_GND_18_o_sub_70_OUT> created at line 525.
+    Found 12-bit subtractor for signal <rd_addr[11]_GND_18_o_sub_130_OUT> created at line 662.
+    Found 12-bit subtractor for signal <wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT> created at line 742.
+    Found 9-bit adder for signal <rd_frames[8]_GND_18_o_add_66_OUT> created at line 521.
+    Found 12-bit adder for signal <wr_addr[11]_GND_18_o_add_112_OUT> created at line 642.
+    Found 12-bit adder for signal <rd_addr[11]_GND_18_o_add_131_OUT> created at line 664.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 157 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <rx_client_fifo_8> synthesized.
+
+Synthesizing Unit <ethernetController>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/ethernetcontroller.v".
+        INMEM_USER_BYTE_WIDTH = 1
+        OUTMEM_USER_BYTE_WIDTH = 1
+        INMEM_USER_ADDRESS_WIDTH = 17
+        OUTMEM_USER_ADDRESS_WIDTH = 13
+        INMEM_USER_REGISTER = 1
+        MAC_ADDRESS = 48'b101010101010101010101010101010101010101010101010
+    Found 13-bit register for signal <tx_max_output_address>.
+    Found 1-bit register for signal <rx_ll_dst_rdy_out>.
+    Found 3-bit register for signal <tx_state>.
+    Found 1-bit register for signal <tx_ll_sof_out>.
+    Found 1-bit register for signal <tx_ll_eof_out>.
+    Found 1-bit register for signal <tx_ll_src_rdy_out>.
+    Found 1-bit register for signal <register32InternalWriteEnable>.
+    Found 1-bit register for signal <executeAfterReceive>.
+    Found 1-bit register for signal <tx_readback_after_execute>.
+    Found 1-bit register for signal <ethToFifoWrite>.
+    Found 1-bit register for signal <fifoToEthRead>.
+    Found 1-bit register for signal <softReset>.
+    Found 1-bit register for signal <resetMaxOutputAddress>.
+    Found 4-bit register for signal <rx_header_counter>.
+    Found 5-bit register for signal <tx_header_counter>.
+    Found 48-bit register for signal <tx_header_buffer_dest_add>.
+    Found 48-bit register for signal <tx_header_buffer_src_add>.
+    Found 16-bit register for signal <tx_header_buffer_len>.
+    Found 1-bit register for signal <tx_packet_payload<71>>.
+    Found 1-bit register for signal <tx_packet_payload<70>>.
+    Found 1-bit register for signal <tx_packet_payload<69>>.
+    Found 1-bit register for signal <tx_packet_payload<68>>.
+    Found 1-bit register for signal <tx_packet_payload<67>>.
+    Found 1-bit register for signal <tx_packet_payload<66>>.
+    Found 1-bit register for signal <tx_packet_payload<65>>.
+    Found 1-bit register for signal <tx_packet_payload<64>>.
+    Found 1-bit register for signal <tx_packet_payload<63>>.
+    Found 1-bit register for signal <tx_packet_payload<62>>.
+    Found 1-bit register for signal <tx_packet_payload<61>>.
+    Found 1-bit register for signal <tx_packet_payload<60>>.
+    Found 1-bit register for signal <tx_packet_payload<59>>.
+    Found 1-bit register for signal <tx_packet_payload<58>>.
+    Found 1-bit register for signal <tx_packet_payload<57>>.
+    Found 1-bit register for signal <tx_packet_payload<56>>.
+    Found 1-bit register for signal <tx_packet_payload<55>>.
+    Found 1-bit register for signal <tx_packet_payload<54>>.
+    Found 1-bit register for signal <tx_packet_payload<53>>.
+    Found 1-bit register for signal <tx_packet_payload<52>>.
+    Found 1-bit register for signal <tx_packet_payload<51>>.
+    Found 1-bit register for signal <tx_packet_payload<50>>.
+    Found 1-bit register for signal <tx_packet_payload<49>>.
+    Found 1-bit register for signal <tx_packet_payload<48>>.
+    Found 1-bit register for signal <tx_packet_payload<47>>.
+    Found 1-bit register for signal <tx_packet_payload<46>>.
+    Found 1-bit register for signal <tx_packet_payload<45>>.
+    Found 1-bit register for signal <tx_packet_payload<44>>.
+    Found 1-bit register for signal <tx_packet_payload<43>>.
+    Found 1-bit register for signal <tx_packet_payload<42>>.
+    Found 1-bit register for signal <tx_packet_payload<41>>.
+    Found 1-bit register for signal <tx_packet_payload<40>>.
+    Found 1-bit register for signal <tx_packet_payload<39>>.
+    Found 1-bit register for signal <tx_packet_payload<38>>.
+    Found 1-bit register for signal <tx_packet_payload<37>>.
+    Found 1-bit register for signal <tx_packet_payload<36>>.
+    Found 1-bit register for signal <tx_packet_payload<35>>.
+    Found 1-bit register for signal <tx_packet_payload<34>>.
+    Found 1-bit register for signal <tx_packet_payload<33>>.
+    Found 1-bit register for signal <tx_packet_payload<32>>.
+    Found 1-bit register for signal <tx_packet_payload<31>>.
+    Found 1-bit register for signal <tx_packet_payload<30>>.
+    Found 1-bit register for signal <tx_packet_payload<29>>.
+    Found 1-bit register for signal <tx_packet_payload<28>>.
+    Found 1-bit register for signal <tx_packet_payload<27>>.
+    Found 1-bit register for signal <tx_packet_payload<26>>.
+    Found 1-bit register for signal <tx_packet_payload<25>>.
+    Found 1-bit register for signal <tx_packet_payload<24>>.
+    Found 1-bit register for signal <tx_packet_payload<23>>.
+    Found 1-bit register for signal <tx_packet_payload<22>>.
+    Found 1-bit register for signal <tx_packet_payload<21>>.
+    Found 1-bit register for signal <tx_packet_payload<20>>.
+    Found 1-bit register for signal <tx_packet_payload<19>>.
+    Found 1-bit register for signal <tx_packet_payload<18>>.
+    Found 1-bit register for signal <tx_packet_payload<17>>.
+    Found 1-bit register for signal <tx_packet_payload<16>>.
+    Found 1-bit register for signal <tx_packet_payload<15>>.
+    Found 1-bit register for signal <tx_packet_payload<14>>.
+    Found 1-bit register for signal <tx_packet_payload<13>>.
+    Found 1-bit register for signal <tx_packet_payload<12>>.
+    Found 1-bit register for signal <tx_packet_payload<11>>.
+    Found 1-bit register for signal <tx_packet_payload<10>>.
+    Found 1-bit register for signal <tx_packet_payload<9>>.
+    Found 1-bit register for signal <tx_packet_payload<8>>.
+    Found 1-bit register for signal <tx_packet_payload<7>>.
+    Found 1-bit register for signal <tx_packet_payload<6>>.
+    Found 1-bit register for signal <tx_packet_payload<5>>.
+    Found 1-bit register for signal <tx_packet_payload<4>>.
+    Found 1-bit register for signal <tx_packet_payload<3>>.
+    Found 1-bit register for signal <tx_packet_payload<2>>.
+    Found 1-bit register for signal <tx_packet_payload<1>>.
+    Found 1-bit register for signal <tx_packet_payload<0>>.
+    Found 7-bit register for signal <rx_error_status>.
+    Found 2-bit register for signal <ethToFifoCommand>.
+    Found 7-bit register for signal <ethToFifoAddress>.
+    Found 3-bit register for signal <rx_command_counter>.
+    Found 16-bit register for signal <rx_SA_reg_value>.
+    Found 16-bit register for signal <ethToFifoData>.
+    Found 8-bit register for signal <rx_reg_address>.
+    Found 32-bit register for signal <rx_reg_value>.
+    Found 32-bit register for signal <tx_curr_mem_address>.
+    Found 48-bit register for signal <tx_save_dest_add>.
+    Found 32-bit register for signal <rx_mem_length>.
+    Found 32-bit register for signal <rx_mem_address>.
+    Found 32-bit register for signal <rx_mem_start_address>.
+    Found 32-bit register for signal <rx_mem_start_length>.
+    Found 32-bit register for signal <tx_curr_bytes_left>.
+    Found 16-bit register for signal <tx_read_len>.
+    Found 40-bit register for signal <rx_header_buffer_dest_add>.
+    Found 48-bit register for signal <rx_header_buffer_src_add>.
+    Found 1-bit register for signal <rx_header_buffer_len<15>>.
+    Found 1-bit register for signal <rx_header_buffer_len<14>>.
+    Found 1-bit register for signal <rx_header_buffer_len<13>>.
+    Found 1-bit register for signal <rx_header_buffer_len<12>>.
+    Found 1-bit register for signal <rx_header_buffer_len<11>>.
+    Found 1-bit register for signal <rx_header_buffer_len<10>>.
+    Found 1-bit register for signal <rx_header_buffer_len<9>>.
+    Found 1-bit register for signal <rx_header_buffer_len<8>>.
+    Found 1-bit register for signal <rx_header_buffer_len<7>>.
+    Found 1-bit register for signal <rx_header_buffer_len<6>>.
+    Found 1-bit register for signal <rx_header_buffer_len<5>>.
+    Found 1-bit register for signal <rx_header_buffer_len<4>>.
+    Found 1-bit register for signal <rx_header_buffer_len<3>>.
+    Found 1-bit register for signal <rx_header_buffer_len<2>>.
+    Found 1-bit register for signal <rx_header_buffer_len<1>>.
+    Found 1-bit register for signal <rx_header_buffer_len<0>>.
+    Found 13-bit register for signal <oldReadAddress>.
+    Found 1-bit register for signal <resetUserClockDomain>.
+    Found 1-bit register for signal <resetControllerClockDomain>.
+    Found 1-bit register for signal <userRunClearHistory>.
+    Found 1-bit register for signal <userRunClearToggle>.
+    Found 2-bit register for signal <userRunClearToggleControllerSide>.
+    Found 1-bit register for signal <userRunRegisterControllerSide>.
+    Found 1-bit register for signal <userRunRegisterSetHistory>.
+    Found 1-bit register for signal <userRunRegisterSetToggle>.
+    Found 1-bit register for signal <softResetHistory>.
+    Found 1-bit register for signal <softResetToggle>.
+    Found 2-bit register for signal <userRunRegisterSetToggleUserSide>.
+    Found 2-bit register for signal <softResetToggleUserSide>.
+    Found 1-bit register for signal <userRunRegisterUserSide>.
+    Found 1-bit register for signal <userLogicReset>.
+    Found 2-bit register for signal <inputMemoryReadDataValidPipeline>.
+    Found 1-bit register for signal <register32ReadDataValid>.
+    Found 7-bit register for signal <sysACE_MPADD>.
+    Found 1-bit register for signal <sysACE_MPWE>.
+    Found 16-bit register for signal <sysACE_MPDATA_In>.
+    Found 1-bit register for signal <sysACE_MPOE>.
+    Found 3-bit register for signal <sysACE_state>.
+    Found 1-bit register for signal <fifoToSysACERead>.
+    Found 1-bit register for signal <sysACEToFifoWrite>.
+    Found 3-bit register for signal <sysACECounter>.
+    Found 5-bit register for signal <rx_state>.
+    Found finite state machine <FSM_4> for signal <tx_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 60                                             |
+    | Inputs             | 33                                             |
+    | Outputs            | 5                                              |
+    | Clock              | controllerSideClock (rising_edge)              |
+    | Reset              | resetControllerClockDomain (positive)          |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_5> for signal <sysACE_state>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 6                                              |
+    | Clock              | sysACE_clk_o (rising_edge)                     |
+    | Reset              | sysACEreset (positive)                         |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_6> for signal <rx_state>.
+    -----------------------------------------------------------------------
+    | States             | 23                                             |
+    | Transitions        | 101                                            |
+    | Inputs             | 30                                             |
+    | Outputs            | 21                                             |
+    | Clock              | controllerSideClock (rising_edge)              |
+    | Reset              | resetControllerClockDomain (positive)          |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 00000                                          |
+    | Power Up State     | 00000                                          |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 17-bit subtractor for signal <GND_20_o_GND_20_o_sub_235_OUT> created at line 815.
+    Found 32-bit subtractor for signal <rx_mem_length[31]_GND_20_o_sub_251_OUT> created at line 835.
+    Found 32-bit subtractor for signal <tx_curr_bytes_left[31]_GND_20_o_sub_602_OUT> created at line 1586.
+    Found 16-bit adder for signal <rx_mem_length[7]_GND_20_o_add_178_OUT> created at line 734.
+    Found 16-bit adder for signal <rx_mem_length[15]_GND_20_o_add_217_OUT> created at line 785.
+    Found 32-bit adder for signal <rx_mem_address[31]_GND_20_o_add_251_OUT> created at line 836.
+    Found 32-bit adder for signal <tx_curr_mem_address[31]_GND_20_o_add_588_OUT> created at line 1525.
+    Found 32-bit adder for signal <n2212> created at line 1568.
+    Found 32-bit adder for signal <n2216> created at line 1598.
+    Found 14-bit adder for signal <n2449> created at line 1656.
+    Found 15-bit adder for signal <n2515[14:0]> created at line 1656.
+    Found 4-bit subtractor for signal <GND_20_o_GND_20_o_sub_8_OUT<3:0>> created at line 463.
+    Found 3-bit subtractor for signal <GND_20_o_GND_20_o_sub_414_OUT<2:0>> created at line 1201.
+    Found 5-bit subtractor for signal <GND_20_o_GND_20_o_sub_573_OUT<4:0>> created at line 1486.
+    Found 16-bit subtractor for signal <GND_20_o_GND_20_o_sub_586_OUT<15:0>> created at line 1519.
+    Found 3-bit subtractor for signal <GND_20_o_GND_20_o_sub_804_OUT<2:0>> created at line 2102.
+    Found 1-bit 7-to-1 multiplexer for signal <tx_state[2]_PWR_21_o_Mux_659_o> created at line 1442.
+    Found 1-bit 6-to-1 multiplexer for signal <tx_state[2]_PWR_21_o_Mux_661_o> created at line 1442.
+    Found 16-bit comparator greater for signal <n0017> created at line 471
+    Found 32-bit comparator greater for signal <GND_20_o_rx_mem_length[23]_LessThan_178_o> created at line 720
+    Found 32-bit comparator greater for signal <GND_20_o_rx_mem_length[31]_LessThan_217_o> created at line 771
+    Found 32-bit comparator equal for signal <n0511> created at line 815
+    Found 8-bit comparator greater for signal <GND_20_o_rx_ll_data_in[7]_LessThan_362_o> created at line 1083
+    Found 8-bit comparator greater for signal <GND_20_o_rx_SA_reg_value[15]_LessThan_416_o> created at line 1210
+    Found 8-bit comparator greater for signal <GND_20_o_rx_ll_data_in[7]_LessThan_480_o> created at line 1323
+    Found 32-bit comparator greater for signal <GND_20_o_tx_curr_bytes_left[31]_LessThan_597_o> created at line 1556
+    Found 32-bit comparator greater for signal <GND_20_o_tx_curr_bytes_left[31]_LessThan_603_o> created at line 1586
+    Found 14-bit comparator greater for signal <GND_20_o_BUS_0009_LessThan_648_o> created at line 1644
+    Found 13-bit comparator greater for signal <tx_max_output_address[12]_outputMemoryWriteAdd[12]_LessThan_730_o> created at line 1689
+    Summary:
+	inferred  16 Adder/Subtractor(s).
+	inferred 731 D-type flip-flop(s).
+	inferred  11 Comparator(s).
+	inferred 1728 Multiplexer(s).
+	inferred   3 Finite State Machine(s).
+Unit <ethernetController> synthesized.
+
+Synthesizing Unit <iobuf16>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/iobuf.v".
+    Summary:
+	no macro.
+Unit <iobuf16> synthesized.
+
+Synthesizing Unit <fifo36Wrapper>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/fifo36wrapper.v".
+    Summary:
+	no macro.
+Unit <fifo36Wrapper> synthesized.
+
+Synthesizing Unit <simpleTestModuleOne>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/simpletestmoduleone.v".
+        INMEM_BYTE_WIDTH = 1
+        OUTMEM_BYTE_WIDTH = 1
+        INMEM_ADDRESS_WIDTH = 17
+        OUTMEM_ADDRESS_WIDTH = 13
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/simpletestmoduleone.v" line 359: Output port <responseUpNot> of the instance <str> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/simpletestmoduleone.v" line 359: Output port <responseDownNot> of the instance <str> is unconnected or connected to loadless signal.
+    Found 32-bit register for signal <length>.
+    Found 1-bit register for signal <userRunClear>.
+    Found 8-bit register for signal <register32Address>.
+    Found 1-bit register for signal <inputMemoryReadReq>.
+    Found 17-bit register for signal <inputMemoryReadAdd>.
+    Found 1-bit register for signal <outputMemoryWriteReq>.
+    Found 13-bit register for signal <outputMemoryWriteAdd>.
+    Found 8-bit register for signal <outputMemoryWriteData>.
+    Found 1-bit register for signal <paramCount>.
+    Found 1-bit register for signal <inputDone>.
+    Found 6-bit register for signal <memCount>.
+    Found 128-bit register for signal <n0240[127:0]>.
+    Found 128-bit register for signal <n0241[127:0]>.
+    Found 1-bit register for signal <LED<7>>.
+    Found 1-bit register for signal <LED<6>>.
+    Found 1-bit register for signal <LED<5>>.
+    Found 1-bit register for signal <LED<4>>.
+    Found 1-bit register for signal <LED<3>>.
+    Found 1-bit register for signal <LED<2>>.
+    Found 1-bit register for signal <LED<1>>.
+    Found 1-bit register for signal <LED<0>>.
+    Found 1-bit register for signal <register32CmdReq>.
+    Found 32-bit register for signal <multiplier>.
+    Found 3-bit register for signal <currState>.
+    Found finite state machine <FSM_7> for signal <currState>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 14                                             |
+    | Outputs            | 9                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 7-bit subtractor for signal <GND_30_o_GND_30_o_sub_62_OUT> created at line 295.
+    Found 8-bit adder for signal <register32Address[7]_GND_30_o_add_13_OUT> created at line 239.
+    Found 17-bit adder for signal <inputMemoryReadAdd[16]_GND_30_o_add_32_OUT> created at line 276.
+    Found 13-bit adder for signal <outputMemoryWriteAdd[12]_GND_30_o_add_112_OUT> created at line 341.
+    Found 6-bit adder for signal <memCount[5]_GND_30_o_add_113_OUT> created at line 342.
+    Found 17-bit subtractor for signal <lengthMinus1<16:0>> created at line 142.
+    Found 8-bit 16-to-1 multiplexer for signal <outputMemoryWriteAdd[3]_responseTop[15][7]_wide_mux_103_OUT> created at line 332.
+    Found 8-bit 16-to-1 multiplexer for signal <GND_30_o_responseBottom[15][7]_wide_mux_106_OUT> created at line 335.
+    Found 17-bit comparator equal for signal <n0044> created at line 275
+    Found 6-bit comparator greater for signal <n0058> created at line 289
+    Found 6-bit comparator greater for signal <n0093> created at line 294
+    Found 32-bit comparator lessequal for signal <n0096> created at line 295
+    Found 13-bit comparator greater for signal <n0146> created at line 331
+    Found 13-bit comparator greater for signal <n0149> created at line 334
+    Found 13-bit comparator equal for signal <n0155> created at line 340
+    Summary:
+	inferred   6 Adder/Subtractor(s).
+	inferred 386 D-type flip-flop(s).
+	inferred   7 Comparator(s).
+	inferred  43 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <simpleTestModuleOne> synthesized.
+
+Synthesizing Unit <serialTransmitReceive>.
+    Related source file is "c:/users/praveen/xilinx work/dropbox/rice internship work/farinaz - low power high speed pufs/puf testing code/sirc_hw/ml605/sirc_hw (real puf)/serialtransmitreceive.v".
+WARNING:Xst:647 - Input <CAout> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <CBout> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <PH1Reg>.
+    Found 1-bit register for signal <PH2Reg>.
+    Found 128-bit register for signal <responseUpReg>.
+    Found 128-bit register for signal <responseUpNotReg>.
+    Found 128-bit register for signal <responseDownReg>.
+    Found 128-bit register for signal <responseDownNotReg>.
+    Found 8-bit register for signal <currBit>.
+    Found 2-bit register for signal <currState>.
+    Found 1-bit register for signal <ExDoneReg>.
+    Found 4-bit register for signal <waitBeforeTrigCount>.
+    Found 1-bit register for signal <TrigReg>.
+    Found 2-bit register for signal <clkCount>.
+    Found finite state machine <FSM_8> for signal <currState>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 3                                              |
+    | Clock              | PH1Reg (rising_edge)                           |
+    | Power Up State     | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 2-bit adder for signal <clkCount[1]_GND_31_o_add_1_OUT> created at line 109.
+    Found 4-bit adder for signal <waitBeforeTrigCount[3]_GND_31_o_add_13_OUT> created at line 162.
+    Found 8-bit adder for signal <currBit[7]_GND_31_o_add_37_OUT> created at line 192.
+    Found 4x2-bit Read Only RAM for signal <_n0847>
+    Found 8-bit 4-to-1 multiplexer for signal <currState[1]_currBit[7]_wide_mux_50_OUT> created at line 132.
+    Found 1-bit 128-to-1 multiplexer for signal <CA_SI> created at line 210.
+    Found 1-bit 128-to-1 multiplexer for signal <CB_SI> created at line 211.
+    Found 4-bit comparator greater for signal <n0010> created at line 160
+    Found 8-bit comparator greater for signal <n0030> created at line 183
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred 530 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred 523 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <serialTransmitReceive> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x2-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 37
+ 10-bit adder                                          : 1
+ 12-bit adder                                          : 3
+ 12-bit addsub                                         : 1
+ 12-bit subtractor                                     : 4
+ 13-bit adder                                          : 1
+ 14-bit adder                                          : 1
+ 15-bit adder                                          : 1
+ 16-bit adder                                          : 2
+ 16-bit subtractor                                     : 1
+ 17-bit adder                                          : 1
+ 17-bit subtractor                                     : 2
+ 2-bit adder                                           : 1
+ 3-bit subtractor                                      : 2
+ 32-bit adder                                          : 4
+ 32-bit subtractor                                     : 2
+ 4-bit adder                                           : 2
+ 4-bit subtractor                                      : 1
+ 5-bit subtractor                                      : 1
+ 6-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 2
+ 9-bit addsub                                          : 2
+# Registers                                            : 211
+ 1-bit register                                        : 116
+ 10-bit register                                       : 1
+ 12-bit register                                       : 15
+ 128-bit register                                      : 6
+ 13-bit register                                       : 4
+ 16-bit register                                       : 6
+ 17-bit register                                       : 1
+ 2-bit register                                        : 16
+ 3-bit register                                        : 3
+ 32-bit register                                       : 9
+ 4-bit register                                        : 5
+ 40-bit register                                       : 1
+ 48-bit register                                       : 4
+ 5-bit register                                        : 1
+ 6-bit register                                        : 3
+ 7-bit register                                        : 3
+ 72-bit register                                       : 1
+ 8-bit register                                        : 14
+ 9-bit register                                        : 2
+# Comparators                                          : 20
+ 13-bit comparator equal                               : 1
+ 13-bit comparator greater                             : 3
+ 14-bit comparator greater                             : 1
+ 16-bit comparator greater                             : 1
+ 17-bit comparator equal                               : 1
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 4
+ 32-bit comparator lessequal                           : 1
+ 4-bit comparator greater                              : 1
+ 6-bit comparator greater                              : 2
+ 8-bit comparator greater                              : 4
+# Multiplexers                                         : 2324
+ 1-bit 128-to-1 multiplexer                            : 2
+ 1-bit 2-to-1 multiplexer                              : 1920
+ 1-bit 6-to-1 multiplexer                              : 1
+ 1-bit 7-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 1
+ 12-bit 2-to-1 multiplexer                             : 5
+ 13-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 88
+ 17-bit 2-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 10
+ 32-bit 2-to-1 multiplexer                             : 39
+ 4-bit 2-to-1 multiplexer                              : 6
+ 48-bit 2-to-1 multiplexer                             : 88
+ 5-bit 2-to-1 multiplexer                              : 52
+ 6-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 28
+ 72-bit 2-to-1 multiplexer                             : 25
+ 8-bit 16-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 47
+ 8-bit 4-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 9
+# Xors                                                 : 29
+ 1-bit xor2                                            : 29
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/blk_mem_gen_inputMem.ngc>.
+Reading core <ipcore_dir/blk_mem_gen_paramReg.ngc>.
+Reading core <ipcore_dir/blk_mem_gen_outputMem.ngc>.
+Loading core <blk_mem_gen_inputMem> for timing and area information for instance <memInputData>.
+Loading core <blk_mem_gen_paramReg> for timing and area information for instance <register32File>.
+Loading core <blk_mem_gen_outputMem> for timing and area information for instance <memOutputData>.
+WARNING:Xst:1710 - FF/Latch <LED_7> (without init value) has a constant value of 0 in block <tm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_6> (without init value) has a constant value of 0 in block <tm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_3> (without init value) has a constant value of 0 in block <tm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_5> (without init value) has a constant value of 0 in block <tm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_4> (without init value) has a constant value of 0 in block <tm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_2> (without init value) has a constant value of 0 in block <tm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <LED_1> (without init value) has a constant value of 0 in block <tm>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <wr_addr_diff_0> of sequential type is unconnected in block <tx_fifo_i>.
+WARNING:Xst:2677 - Node <wr_addr_diff_1> of sequential type is unconnected in block <tx_fifo_i>.
+WARNING:Xst:2677 - Node <rd_valid_pipe_2> of sequential type is unconnected in block <rx_fifo_i>.
+WARNING:Xst:2677 - Node <wr_addr_diff_0> of sequential type is unconnected in block <rx_fifo_i>.
+WARNING:Xst:2677 - Node <wr_addr_diff_1> of sequential type is unconnected in block <rx_fifo_i>.
+WARNING:Xst:2677 - Node <multiplier_17> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_18> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_19> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_20> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_21> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_22> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_23> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_24> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_25> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_26> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_27> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_28> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_29> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_30> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <multiplier_31> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_17> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_18> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_19> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_20> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_21> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_22> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_23> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_24> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_25> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_26> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_27> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_28> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_29> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_30> of sequential type is unconnected in block <tm>.
+WARNING:Xst:2677 - Node <length_31> of sequential type is unconnected in block <tm>.
+
+Synthesizing (advanced) Unit <ethernetController>.
+The following registers are absorbed into counter <sysACECounter>: 1 register on signal <sysACECounter>.
+Unit <ethernetController> synthesized (advanced).
+
+Synthesizing (advanced) Unit <rx_client_fifo_8>.
+The following registers are absorbed into accumulator <rd_addr>: 1 register on signal <rd_addr>.
+The following registers are absorbed into counter <rd_frames>: 1 register on signal <rd_frames>.
+The following registers are absorbed into counter <wr_addr>: 1 register on signal <wr_addr>.
+Unit <rx_client_fifo_8> synthesized (advanced).
+
+Synthesizing (advanced) Unit <serialTransmitReceive>.
+The following registers are absorbed into counter <clkCount>: 1 register on signal <clkCount>.
+INFO:Xst:3231 - The small RAM <Mram__n0847> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <clkCount>      |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <serialTransmitReceive> synthesized (advanced).
+
+Synthesizing (advanced) Unit <simpleTestModuleOne>.
+The following registers are absorbed into counter <register32Address>: 1 register on signal <register32Address>.
+The following registers are absorbed into counter <inputMemoryReadAdd>: 1 register on signal <inputMemoryReadAdd>.
+Unit <simpleTestModuleOne> synthesized (advanced).
+
+Synthesizing (advanced) Unit <tx_client_fifo_8>.
+The following registers are absorbed into accumulator <wr_frames>: 1 register on signal <wr_frames>.
+The following registers are absorbed into counter <rd_16_count>: 1 register on signal <rd_16_count>.
+The following registers are absorbed into counter <rd_slot_timer>: 1 register on signal <rd_slot_timer>.
+Unit <tx_client_fifo_8> synthesized (advanced).
+WARNING:Xst:2677 - Node <rd_valid_pipe_2> of sequential type is unconnected in block <rx_client_fifo_8>.
+WARNING:Xst:2677 - Node <multiplier_17> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_18> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_19> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_20> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_21> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_22> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_23> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_24> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_25> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_26> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_27> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_28> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_29> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_30> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <multiplier_31> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_17> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_18> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_19> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_20> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_21> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_22> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_23> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_24> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_25> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_26> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_27> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_28> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_29> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_30> of sequential type is unconnected in block <simpleTestModuleOne>.
+WARNING:Xst:2677 - Node <length_31> of sequential type is unconnected in block <simpleTestModuleOne>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x2-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 27
+ 12-bit adder                                          : 2
+ 12-bit subtractor                                     : 4
+ 13-bit adder                                          : 1
+ 14-bit adder                                          : 1
+ 15-bit adder                                          : 1
+ 16-bit adder                                          : 4
+ 16-bit subtractor                                     : 1
+ 17-bit subtractor                                     : 2
+ 3-bit subtractor                                      : 1
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 2
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+ 5-bit subtractor                                      : 1
+ 6-bit adder                                           : 1
+ 7-bit subtractor                                      : 1
+ 8-bit adder                                           : 1
+# Counters                                             : 8
+ 10-bit up counter                                     : 1
+ 12-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 3-bit down counter                                    : 1
+ 4-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+ 9-bit updown counter                                  : 1
+# Accumulators                                         : 2
+ 12-bit updown accumulator                             : 1
+ 9-bit updown accumulator                              : 1
+# Registers                                            : 1949
+ Flip-Flops                                            : 1949
+# Comparators                                          : 20
+ 13-bit comparator equal                               : 1
+ 13-bit comparator greater                             : 3
+ 14-bit comparator greater                             : 1
+ 16-bit comparator greater                             : 1
+ 17-bit comparator equal                               : 1
+ 32-bit comparator equal                               : 1
+ 32-bit comparator greater                             : 4
+ 32-bit comparator lessequal                           : 1
+ 4-bit comparator greater                              : 1
+ 6-bit comparator greater                              : 2
+ 8-bit comparator greater                              : 4
+# Multiplexers                                         : 2560
+ 1-bit 128-to-1 multiplexer                            : 2
+ 1-bit 2-to-1 multiplexer                              : 2195
+ 1-bit 6-to-1 multiplexer                              : 1
+ 1-bit 7-to-1 multiplexer                              : 1
+ 12-bit 2-to-1 multiplexer                             : 3
+ 13-bit 2-to-1 multiplexer                             : 3
+ 16-bit 2-to-1 multiplexer                             : 88
+ 3-bit 2-to-1 multiplexer                              : 9
+ 32-bit 2-to-1 multiplexer                             : 39
+ 4-bit 2-to-1 multiplexer                              : 6
+ 48-bit 2-to-1 multiplexer                             : 88
+ 5-bit 2-to-1 multiplexer                              : 52
+ 6-bit 2-to-1 multiplexer                              : 3
+ 7-bit 2-to-1 multiplexer                              : 28
+ 72-bit 2-to-1 multiplexer                             : 25
+ 8-bit 16-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 13
+ 8-bit 4-to-1 multiplexer                              : 1
+ 9-bit 2-to-1 multiplexer                              : 1
+# FSMs                                                 : 9
+# Xors                                                 : 29
+ 1-bit xor2                                            : 29
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <LED_7> (without init value) has a constant value of 0 in block <simpleTestModuleOne>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_6> (without init value) has a constant value of 0 in block <simpleTestModuleOne>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_5> (without init value) has a constant value of 0 in block <simpleTestModuleOne>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_4> (without init value) has a constant value of 0 in block <simpleTestModuleOne>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_3> (without init value) has a constant value of 0 in block <simpleTestModuleOne>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_2> (without init value) has a constant value of 0 in block <simpleTestModuleOne>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <LED_1> (without init value) has a constant value of 0 in block <simpleTestModuleOne>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <E2M/emac_ll/client_side_FIFO/tx_fifo_i/FSM_0> on signal <wr_state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+ 11    | 11
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <E2M/emac_ll/client_side_FIFO/tx_fifo_i/FSM_1> on signal <rd_state[1:9]> with one-hot encoding.
+--------------------
+ State | Encoding
+--------------------
+ 0000  | 000000001
+ 0001  | 000000010
+ 1000  | 000000100
+ 0010  | 000001000
+ 0011  | 000010000
+ 0100  | 000100000
+ 0101  | 001000000
+ 0110  | 010000000
+ 0111  | 100000000
+--------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <E2M/emac_ll/client_side_FIFO/rx_fifo_i/FSM_2> on signal <wr_state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 011
+ 100   | 010
+ 011   | 110
+ 101   | 111
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <E2M/emac_ll/client_side_FIFO/rx_fifo_i/FSM_3> on signal <rd_state[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 110   | 110
+ 101   | 101
+ 111   | 111
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <E2M/EC/FSM_6> on signal <rx_state[1:23]> with one-hot encoding.
+----------------------------------
+ State | Encoding
+----------------------------------
+ 00000 | 00000000000000000000001
+ 00001 | 00000000000000000000010
+ 10110 | 00000000000000000000100
+ 10101 | 00000000000000000001000
+ 00010 | 00000000000000000010000
+ 10001 | 00000000000000000100000
+ 01100 | 00000000000000001000000
+ 00101 | 00000000000000010000000
+ 01001 | 00000000000000100000000
+ 10100 | 00000000000001000000000
+ 00011 | 00000000000010000000000
+ 01111 | 00000000000100000000000
+ 01000 | 00000000001000000000000
+ 00100 | 00000000010000000000000
+ 00110 | 00000000100000000000000
+ 00111 | 00000001000000000000000
+ 01010 | 00000010000000000000000
+ 01011 | 00000100000000000000000
+ 01101 | 00001000000000000000000
+ 01110 | 00010000000000000000000
+ 10000 | 00100000000000000000000
+ 10010 | 01000000000000000000000
+ 10011 | 10000000000000000000000
+----------------------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <E2M/EC/FSM_5> on signal <sysACE_state[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 00
+ 001   | 01
+ 010   | 11
+ 011   | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <E2M/EC/FSM_4> on signal <tx_state[1:3]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 011   | 001
+ 001   | 010
+ 100   | 011
+ 010   | 100
+ 101   | 101
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <tm/FSM_7> on signal <currState[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+ 101   | 101
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <tm/str/FSM_8> on signal <currState[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+INFO:Xst:1901 - Instance ideldv in unit gmii_if of type IODELAY has been replaced by IODELAYE1
+INFO:Xst:1901 - Instance ideler in unit gmii_if of type IODELAY has been replaced by IODELAYE1
+INFO:Xst:1901 - Instance ideld0 in unit gmii_if of type IODELAY has been replaced by IODELAYE1
+INFO:Xst:1901 - Instance ideld1 in unit gmii_if of type IODELAY has been replaced by IODELAYE1
+INFO:Xst:1901 - Instance ideld2 in unit gmii_if of type IODELAY has been replaced by IODELAYE1
+INFO:Xst:1901 - Instance ideld3 in unit gmii_if of type IODELAY has been replaced by IODELAYE1
+INFO:Xst:1901 - Instance ideld4 in unit gmii_if of type IODELAY has been replaced by IODELAYE1
+INFO:Xst:1901 - Instance ideld5 in unit gmii_if of type IODELAY has been replaced by IODELAYE1
+INFO:Xst:1901 - Instance ideld6 in unit gmii_if of type IODELAY has been replaced by IODELAYE1
+INFO:Xst:1901 - Instance ideld7 in unit gmii_if of type IODELAY has been replaced by IODELAYE1
+INFO:Xst:1901 - Instance clkBPLL in unit ethernetController of type PLL_BASE has been replaced by PLL_ADV
+INFO:Xst:1901 - Instance SysACEToEthFifo/FIFO18_inst in unit SysACEToEthFifo/FIFO18_inst of type FIFO18_36 has been replaced by FIFO18E1
+INFO:Xst:1901 - Instance EthToSysACEFifo/FIFO18_inst in unit EthToSysACEFifo/FIFO18_inst of type FIFO18_36 has been replaced by FIFO18E1
+INFO:Xst:1901 - Instance clkBPLL in unit system of type PLL_BASE has been replaced by PLL_ADV
+
+Optimizing unit <emac_single_locallink> ...
+
+Optimizing unit <gmii_if> ...
+
+Optimizing unit <iobuf16> ...
+
+Optimizing unit <system> ...
+
+Optimizing unit <ethernet2BlockMem> ...
+
+Optimizing unit <tx_client_fifo_8> ...
+
+Optimizing unit <rx_client_fifo_8> ...
+
+Optimizing unit <ethernetController> ...
+
+Optimizing unit <simpleTestModuleOne> ...
+
+Optimizing unit <serialTransmitReceive> ...
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO/tx_fifo_i/wr_addr_diff_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO/tx_fifo_i/wr_addr_diff_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO/tx_fifo_i/wr_fifo_status_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO/tx_fifo_i/wr_fifo_status_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO/tx_fifo_i/wr_fifo_status_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO/tx_fifo_i/wr_fifo_status_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_addr_diff_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_addr_diff_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_fifo_status_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_fifo_status_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_fifo_status_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_fifo_status_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_127> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_126> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_125> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_124> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_123> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_122> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_121> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_120> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_119> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_118> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_117> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_116> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_115> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_114> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_113> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_112> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_111> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_110> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_109> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_108> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_107> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_106> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_105> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_104> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_103> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_102> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_101> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_100> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_99> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_98> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_97> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_96> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_95> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_94> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_93> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_92> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_91> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_90> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_89> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_88> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_87> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_86> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_85> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_84> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_83> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_82> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_81> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_80> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_79> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_78> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_77> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_76> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_75> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_74> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_73> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_72> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_71> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_70> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_69> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_68> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_67> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_66> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_65> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_64> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_63> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_62> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_61> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_60> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_59> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_58> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_57> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_56> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_55> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_54> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_53> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_52> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_51> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_50> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_49> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_48> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_47> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_46> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_45> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_44> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_43> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_42> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_41> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_40> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_39> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_38> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_37> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_36> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_35> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_34> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_33> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_32> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_31> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_30> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_29> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_28> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_27> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_26> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_25> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_24> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_23> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_22> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_21> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_20> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_19> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_18> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_17> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_16> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_15> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_14> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_13> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_12> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_11> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_10> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_9> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_8> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_7> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_6> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_5> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_4> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseDownNotReg_0> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_127> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_126> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_125> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_124> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_123> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_122> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_121> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_120> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_119> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_118> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_117> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_116> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_115> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_114> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_113> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_112> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_111> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_110> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_109> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_108> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_107> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_106> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_105> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_104> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_103> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_102> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_101> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_100> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_99> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_98> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_97> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_96> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_95> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_94> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_93> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_92> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_91> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_90> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_89> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_88> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_87> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_86> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_85> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_84> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_83> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_82> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_81> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_80> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_79> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_78> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_77> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_76> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_75> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_74> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_73> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_72> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_71> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_70> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_69> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_68> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_67> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_66> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_65> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_64> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_63> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_62> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_61> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_60> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_59> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_58> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_57> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_56> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_55> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_54> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_53> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_52> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_51> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_50> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_49> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_48> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_47> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_46> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_45> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_44> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_43> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_42> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_41> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_40> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_39> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_38> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_37> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_36> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_35> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_34> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_33> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_32> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_31> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_30> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_29> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_28> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_27> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_26> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_25> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_24> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_23> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_22> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_21> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_20> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_19> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_18> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_17> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_16> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_15> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_14> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_13> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_12> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_11> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_10> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_9> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_8> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_7> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_6> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_5> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_4> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_3> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_2> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_1> of sequential type is unconnected in block <system>.
+WARNING:Xst:2677 - Node <tm/str/responseUpNotReg_0> of sequential type is unconnected in block <system>.
+INFO:Xst:2261 - The FF/Latch <E2M/EC/rx_error_status_6> in Unit <system> is equivalent to the following FF/Latch, which will be removed : <E2M/EC/rx_error_status_5> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block system, actual ratio is 2.
+FlipFlop E2M/delayCtrl0Reset_12 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+Processing Unit <system> :
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/rd_data_out_7>.
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/rd_data_out_6>.
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/rd_data_out_5>.
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/rd_data_out_4>.
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/rd_data_out_3>.
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/rd_data_out_2>.
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/rd_data_out_1>.
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/rd_data_out_0>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_data_bram_7>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_data_bram_6>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_data_bram_5>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_data_bram_4>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_data_bram_3>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_data_bram_2>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_data_bram_1>.
+	Found 3-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_data_bram_0>.
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/rd_valid_pipe_1>.
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_bf_pipe_1>.
+	Found 2-bit shift register for signal <E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_gf_pipe_1>.
+INFO:Xst:741 - HDL ADVISOR - A 12-bit shift register was found for signal <E2M/delayCtrl0Reset_11> and currently occupies 12 logic cells (6 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <system> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1765
+ Flip-Flops                                            : 1765
+# Shift Registers                                      : 19
+ 2-bit shift register                                  : 11
+ 3-bit shift register                                  : 8
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : system.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 3967
+#      GND                         : 6
+#      INV                         : 149
+#      LUT1                        : 181
+#      LUT2                        : 133
+#      LUT3                        : 138
+#      LUT4                        : 218
+#      LUT5                        : 856
+#      LUT6                        : 1376
+#      MUXCY                       : 441
+#      MUXF7                       : 48
+#      MUXF8                       : 16
+#      VCC                         : 4
+#      XORCY                       : 401
+# FlipFlops/Latches                : 1794
+#      FD                          : 61
+#      FDC                         : 31
+#      FDCE                        : 13
+#      FDE                         : 1262
+#      FDP                         : 29
+#      FDR                         : 151
+#      FDRE                        : 236
+#      FDS                         : 10
+#      ODDR                        : 1
+# RAMS                             : 39
+#      FIFO18E1                    : 2
+#      RAMB36E1                    : 37
+# Shift Registers                  : 19
+#      SRLC16E                     : 19
+# Clock Buffers                    : 5
+#      BUFG                        : 4
+#      BUFGP                       : 1
+# IO Buffers                       : 66
+#      IBUF                        : 14
+#      IBUFGDS                     : 1
+#      IOBUF                       : 16
+#      OBUF                        : 35
+# Others                           : 14
+#      IDELAYCTRL                  : 1
+#      IODELAYE1                   : 10
+#      PLL_ADV                     : 2
+#      TEMAC_SINGLE                : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx240tff1156-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1794  out of  301440     0%  
+ Number of Slice LUTs:                 3070  out of  150720     2%  
+    Number used as Logic:              3051  out of  150720     2%  
+    Number used as Memory:               19  out of  58400     0%  
+       Number used as SRL:               19
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3451
+   Number with an unused Flip Flop:    1657  out of   3451    48%  
+   Number with an unused LUT:           381  out of   3451    11%  
+   Number of fully used LUT-FF pairs:  1413  out of   3451    40%  
+   Number of unique control sets:        70
+
+IO Utilization: 
+ Number of IOs:                          78
+ Number of bonded IOBs:                  68  out of    600    11%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               39  out of    416     9%  
+    Number using Block RAM only:         37
+    Number using FIFO only:               2
+ Number of BUFG/BUFGCTRLs:                5  out of     32    15%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK_200P                           | IBUFGDS                | 15    |
+GMII_RX_CLK_0                      | BUFGP                  | 115   |
+CLK_200P                           | clkBPLL:CLKOUT0        | 1029  |
+sysACE_CLK                         | E2M/EC/clkBPLL:CLKOUT0 | 34    |
+CLK_200P                           | clkBPLL:CLKOUT1        | 425   |
+tm/str/PH1Reg                      | BUFG                   | 272   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                                    | Buffer(FF name)                                                                                                                                       | Load  |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+E2M/EC/memInputData/N1(E2M/EC/memInputData/XST_GND:G)                                                                                                                                                                                                                                             | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B)  | 64    |
+E2M/EC/memOutputData/N1(E2M/EC/memOutputData/XST_GND:G)                                                                                                                                                                                                                                           | NONE(E2M/EC/memOutputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.SIMPLE_PRIM36.ram)     | 8     |
+LED_7_OBUF(XST_GND:G)                                                                                                                                                                                                                                                                             | NONE(E2M/emac_ll/client_side_FIFO/rx_fifo_i/ramgen)                                                                                                   | 6     |
+E2M/EC/register32File/N1(E2M/EC/register32File/XST_GND:G)                                                                                                                                                                                                                                         | NONE(E2M/EC/register32File/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/TRUE_DP.SIMPLE_PRIM36.ram)| 4     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[11].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)| NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[15].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T) | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[4].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[5].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[6].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[8].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/cascadelata_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTA)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/cascadelatb_tmp(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_B:CASCADEOUTB)  | NONE(E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[9].ram.r/v6_noinit.ram/SDP.CASCADED_PRIM36.ram_T)  | 2     |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 19.130ns (Maximum Frequency: 52.274MHz)
+   Minimum input arrival time before clock: 2.628ns
+   Maximum output required time after clock: 3.447ns
+   Maximum combinational path delay: 0.896ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_200P'
+  Clock period: 19.130ns (frequency: 52.274MHz)
+  Total number of paths / destination ports: 155016 / 4341
+-------------------------------------------------------------------------
+Delay:               3.826ns (Levels of Logic = 6)
+  Source:            E2M/delayCtrl0Reset_12_1 (FF)
+  Destination:       E2M/EC/tx_header_buffer_src_add_25 (FF)
+  Source Clock:      CLK_200P rising
+  Destination Clock: CLK_200P rising 0.6X
+
+  Data Path: E2M/delayCtrl0Reset_12_1 to E2M/EC/tx_header_buffer_src_add_25
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.375   0.417  E2M/delayCtrl0Reset_12_1 (E2M/delayCtrl0Reset_12_1)
+     LUT2:I1->O            1   0.068   0.399  E2M/EC/sysACEreset1_1 (E2M/EC/sysACEreset_0)
+     begin scope: 'E2M/EC/SysACEToEthFifo/FIFO18_inst:RST'
+     FIFO18E1:RST->EMPTY   16   0.817   0.515  SysACEToEthFifo/FIFO18_inst (EMPTY)
+     end scope: 'E2M/EC/SysACEToEthFifo/FIFO18_inst:EMPTY'
+     LUT5:I4->O           17   0.068   0.523  E2M/EC/rx_state__n4868_inv61_2 (E2M/EC/rx_state__n4868_inv611)
+     LUT6:I5->O           13   0.068   0.497  E2M/EC/rx_state_rx_state[4]_tx_header_buffer_src_add[47]_wide_mux_526_OUT<11>5 (E2M/EC/rx_state_rx_state[4]_tx_header_buffer_src_add[47]_wide_mux_526_OUT<11>5)
+     LUT6:I5->O            1   0.068   0.000  E2M/EC/Mmux_tx_state[2]_rx_state[4]_wide_mux_669_OUT47 (E2M/EC/tx_state[2]_rx_state[4]_wide_mux_669_OUT<1>)
+     FDE:D                     0.011          E2M/EC/tx_header_buffer_src_add_1
+    ----------------------------------------
+    Total                      3.826ns (1.475ns logic, 2.351ns route)
+                                       (38.6% logic, 61.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'GMII_RX_CLK_0'
+  Clock period: 3.438ns (frequency: 290.867MHz)
+  Total number of paths / destination ports: 1909 / 188
+-------------------------------------------------------------------------
+Delay:               3.438ns (Levels of Logic = 15)
+  Source:            E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_7 (FF)
+  Destination:       E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_addr_diff_11 (FF)
+  Source Clock:      GMII_RX_CLK_0 rising
+  Destination Clock: GMII_RX_CLK_0 rising
+
+  Data Path: E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_7 to E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_addr_diff_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.375   0.789  E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_7 (E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_rd_addr_gray_7)
+     LUT6:I1->O           11   0.068   0.844  E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_rd_addr<0>61 (E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_rd_addr<0>_bdd10)
+     LUT6:I0->O            1   0.068   0.491  E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_rd_addr<0> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_rd_addr<0>)
+     LUT2:I0->O            1   0.068   0.000  E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_lut<0> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_lut<0>)
+     MUXCY:S->O            1   0.290   0.000  E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<0> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<1> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<2> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<3> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<4> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<5> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<6> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<7> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<8> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<9> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<9>)
+     MUXCY:CI->O           0   0.019   0.000  E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<10> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_cy<10>)
+     XORCY:CI->O           1   0.239   0.000  E2M/emac_ll/client_side_FIFO/rx_fifo_i/Msub_wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT_xor<11> (E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_addr_diff[11]_wr_rd_addr[11]_mux_169_OUT<11>)
+     FDR:D                     0.011          E2M/emac_ll/client_side_FIFO/rx_fifo_i/wr_addr_diff_11
+    ----------------------------------------
+    Total                      3.438ns (1.314ns logic, 2.124ns route)
+                                       (38.2% logic, 61.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'sysACE_CLK'
+  Clock period: 2.517ns (frequency: 397.298MHz)
+  Total number of paths / destination ports: 288 / 60
+-------------------------------------------------------------------------
+Delay:               2.517ns (Levels of Logic = 2)
+  Source:            E2M/EC/sysACECounter_0 (FF)
+  Destination:       E2M/EC/sysACE_MPDATA_In_15 (FF)
+  Source Clock:      sysACE_CLK rising +118
+  Destination Clock: sysACE_CLK rising +118
+
+  Data Path: E2M/EC/sysACECounter_0 to E2M/EC/sysACE_MPDATA_In_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.375   0.608  E2M/EC/sysACECounter_0 (E2M/EC/sysACECounter_0)
+     LUT3:I0->O            1   0.068   0.638  E2M/EC/_n4682_inv_SW0 (N56)
+     LUT6:I2->O           16   0.068   0.497  E2M/EC/_n4682_inv (E2M/EC/_n4682_inv)
+     FDE:CE                    0.263          E2M/EC/sysACE_MPDATA_In_0
+    ----------------------------------------
+    Total                      2.517ns (0.774ns logic, 1.743ns route)
+                                       (30.8% logic, 69.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'tm/str/PH1Reg'
+  Clock period: 2.234ns (frequency: 447.628MHz)
+  Total number of paths / destination ports: 3231 / 532
+-------------------------------------------------------------------------
+Delay:               2.234ns (Levels of Logic = 2)
+  Source:            tm/str/currState_FSM_FFd1 (FF)
+  Destination:       tm/str/currBit_6 (FF)
+  Source Clock:      tm/str/PH1Reg rising
+  Destination Clock: tm/str/PH1Reg rising
+
+  Data Path: tm/str/currState_FSM_FFd1 to tm/str/currBit_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              19   0.375   0.897  tm/str/currState_FSM_FFd1 (tm/str/currState_FSM_FFd1)
+     LUT6:I0->O            7   0.068   0.815  tm/str/Mmux_currState[1]_currBit[7]_wide_mux_50_OUT1011 (tm/str/Mmux_currState[1]_currBit[7]_wide_mux_50_OUT101)
+     LUT6:I1->O            1   0.068   0.000  tm/str/Mmux_currState[1]_currBit[7]_wide_mux_50_OUT41 (tm/str/currState[1]_currBit[7]_wide_mux_50_OUT<1>)
+     FD:D                      0.011          tm/str/currBit_1
+    ----------------------------------------
+    Total                      2.234ns (0.522ns logic, 1.712ns route)
+                                       (23.4% logic, 76.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_200P'
+  Total number of paths / destination ports: 167 / 110
+-------------------------------------------------------------------------
+Offset:              2.628ns (Levels of Logic = 3)
+  Source:            E2M/emac_ll/emac_single_block_inst/emac_single_inst/v6_emac:EMACCLIENTTXACK (PAD)
+  Destination:       E2M/emac_ll/client_side_FIFO/tx_fifo_i/rd_eof (FF)
+  Destination Clock: CLK_200P rising 0.6X
+
+  Data Path: E2M/emac_ll/emac_single_block_inst/emac_single_inst/v6_emac:EMACCLIENTTXACK to E2M/emac_ll/client_side_FIFO/tx_fifo_i/rd_eof
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    TEMAC_SINGLE:EMACCLIENTTXACK   20   0.000   0.542  E2M/emac_ll/emac_single_block_inst/emac_single_inst/v6_emac (E2M/emac_ll/tx_ack_i)
+     LUT3:I2->O            2   0.068   0.587  E2M/emac_ll/client_side_FIFO/tx_fifo_i/rd_transmit_frame_inv1 (E2M/emac_ll/client_side_FIFO/tx_fifo_i/rd_transmit_frame_inv)
+     LUT6:I3->O            2   0.068   0.497  E2M/emac_ll/client_side_FIFO/tx_fifo_i/rd_en_bram11 (E2M/emac_ll/client_side_FIFO/tx_fifo_i/rd_en_bram1)
+     LUT2:I0->O           22   0.068   0.535  E2M/emac_ll/client_side_FIFO/tx_fifo_i/Mmux_rd_en11 (E2M/emac_ll/client_side_FIFO/tx_fifo_i/rd_en)
+     FDE:CE                    0.263          E2M/emac_ll/client_side_FIFO/tx_fifo_i/rd_eof_reg
+    ----------------------------------------
+    Total                      2.628ns (0.467ns logic, 2.161ns route)
+                                       (17.8% logic, 82.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'GMII_RX_CLK_0'
+  Total number of paths / destination ports: 21 / 21
+-------------------------------------------------------------------------
+Offset:              0.410ns (Levels of Logic = 0)
+  Source:            E2M/emac_ll/emac_single_block_inst/emac_single_inst/v6_emac:EMACCLIENTRXD7 (PAD)
+  Destination:       E2M/emac_ll/rx_data_r_7 (FF)
+  Destination Clock: GMII_RX_CLK_0 rising
+
+  Data Path: E2M/emac_ll/emac_single_block_inst/emac_single_inst/v6_emac:EMACCLIENTRXD7 to E2M/emac_ll/rx_data_r_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    TEMAC_SINGLE:EMACCLIENTRXD7    1   0.000   0.399  E2M/emac_ll/emac_single_block_inst/emac_single_inst/v6_emac (E2M/emac_ll/rx_data_i<7>)
+     FDC:D                     0.011          E2M/emac_ll/rx_data_r_7
+    ----------------------------------------
+    Total                      0.410ns (0.011ns logic, 0.399ns route)
+                                       (2.7% logic, 97.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'tm/str/PH1Reg'
+  Total number of paths / destination ports: 256 / 256
+-------------------------------------------------------------------------
+Offset:              0.673ns (Levels of Logic = 2)
+  Source:            SO_Down (PAD)
+  Destination:       tm/str/responseDownReg_127 (FF)
+  Destination Clock: tm/str/PH1Reg rising
+
+  Data Path: SO_Down to tm/str/responseDownReg_127
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           128   0.003   0.591  SO_Down_IBUF (SO_Down_IBUF)
+     LUT6:I5->O            1   0.068   0.000  tm/str/Mmux_responseDownReg[0]_SO_Down_MUX_2383_o11 (tm/str/responseDownReg[0]_SO_Down_MUX_2383_o)
+     FDE:D                     0.011          tm/str/responseDownReg_0
+    ----------------------------------------
+    Total                      0.673ns (0.082ns logic, 0.591ns route)
+                                       (12.2% logic, 87.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_200P'
+  Total number of paths / destination ports: 280 / 26
+-------------------------------------------------------------------------
+Offset:              3.149ns (Levels of Logic = 5)
+  Source:            tm/challengeA_15_18 (FF)
+  Destination:       CA_SI (PAD)
+  Source Clock:      CLK_200P rising 0.8X
+
+  Data Path: tm/challengeA_15_18 to CA_SI
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.375   0.644  tm/challengeA_15_18 (tm/challengeA_15_18)
+     LUT6:I2->O            1   0.068   0.638  tm/str/Mmux_CA_SI_134 (tm/str/Mmux_CA_SI_134)
+     LUT6:I2->O            1   0.068   0.638  tm/str/Mmux_CA_SI_81 (tm/str/Mmux_CA_SI_81)
+     LUT6:I2->O            1   0.068   0.000  tm/str/Mmux_CA_SI_3 (tm/str/Mmux_CA_SI_3)
+     MUXF7:I1->O           1   0.248   0.399  tm/str/Mmux_CA_SI_2_f7 (CA_SI_OBUF)
+     OBUF:I->O                 0.003          CA_SI_OBUF (CA_SI)
+    ----------------------------------------
+    Total                      3.149ns (0.830ns logic, 2.319ns route)
+                                       (26.4% logic, 73.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'sysACE_CLK'
+  Total number of paths / destination ports: 41 / 25
+-------------------------------------------------------------------------
+Offset:              1.374ns (Levels of Logic = 2)
+  Source:            E2M/EC/sysACE_MPOE (FF)
+  Destination:       sysACE_MPDATA<15> (PAD)
+  Source Clock:      sysACE_CLK rising +118
+
+  Data Path: E2M/EC/sysACE_MPOE to sysACE_MPDATA<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              3   0.375   0.413  E2M/EC/sysACE_MPOE (E2M/EC/sysACE_MPOE)
+     INV:I->O             16   0.086   0.497  E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 (E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o)
+     IOBUF:T->IO               0.003          E2M/EC/sysACEIO/IOBUF_B15 (sysACE_MPDATA<15>)
+    ----------------------------------------
+    Total                      1.374ns (0.464ns logic, 0.910ns route)
+                                       (33.8% logic, 66.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'tm/str/PH1Reg'
+  Total number of paths / destination ports: 171 / 3
+-------------------------------------------------------------------------
+Offset:              3.447ns (Levels of Logic = 5)
+  Source:            tm/str/currBit_1 (FF)
+  Destination:       CA_SI (PAD)
+  Source Clock:      tm/str/PH1Reg rising
+
+  Data Path: tm/str/currBit_1 to CA_SI
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              86   0.375   0.942  tm/str/currBit_1 (tm/str/currBit_1)
+     LUT6:I0->O            1   0.068   0.638  tm/str/Mmux_CA_SI_134 (tm/str/Mmux_CA_SI_134)
+     LUT6:I2->O            1   0.068   0.638  tm/str/Mmux_CA_SI_81 (tm/str/Mmux_CA_SI_81)
+     LUT6:I2->O            1   0.068   0.000  tm/str/Mmux_CA_SI_3 (tm/str/Mmux_CA_SI_3)
+     MUXF7:I1->O           1   0.248   0.399  tm/str/Mmux_CA_SI_2_f7 (CA_SI_OBUF)
+     OBUF:I->O                 0.003          CA_SI_OBUF (CA_SI)
+    ----------------------------------------
+    Total                      3.447ns (0.830ns logic, 2.617ns route)
+                                       (24.1% logic, 75.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'GMII_RX_CLK_0'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              0.774ns (Levels of Logic = 0)
+  Source:            E2M/emac_ll/emac_single_block_inst/gmii/RX_DV_TO_MAC (FF)
+  Destination:       E2M/emac_ll/emac_single_block_inst/emac_single_inst/v6_emac:PHYEMACRXDV (PAD)
+  Source Clock:      GMII_RX_CLK_0 rising
+
+  Data Path: E2M/emac_ll/emac_single_block_inst/gmii/RX_DV_TO_MAC to E2M/emac_ll/emac_single_block_inst/emac_single_inst/v6_emac:PHYEMACRXDV
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.375   0.399  E2M/emac_ll/emac_single_block_inst/gmii/RX_DV_TO_MAC (E2M/emac_ll/emac_single_block_inst/gmii/RX_DV_TO_MAC)
+    TEMAC_SINGLE:PHYEMACRXDV        0.000          E2M/emac_ll/emac_single_block_inst/emac_single_inst/v6_emac
+    ----------------------------------------
+    Total                      0.774ns (0.375ns logic, 0.399ns route)
+                                       (48.4% logic, 51.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 13 / 13
+-------------------------------------------------------------------------
+Delay:               0.896ns (Levels of Logic = 3)
+  Source:            RESET (PAD)
+  Destination:       GMII_RESET_B (PAD)
+
+  Data Path: RESET to GMII_RESET_B
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.003   0.405  reset_ibuf (hard_reset_high)
+     INV:I->O              1   0.086   0.399  hard_reset_high_INV_148_o1_INV_0 (hard_reset_high_INV_148_o)
+     OBUF:I->O                 0.003          GMII_RESET_B_OBUF (GMII_RESET_B)
+    ----------------------------------------
+    Total                      0.896ns (0.092ns logic, 0.804ns route)
+                                       (10.3% logic, 89.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_200P
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_200P       |    6.620|         |         |         |
+GMII_RX_CLK_0  |    0.791|         |         |         |
+tm/str/PH1Reg  |    2.080|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock GMII_RX_CLK_0
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_200P       |    1.392|         |         |         |
+GMII_RX_CLK_0  |    3.438|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock sysACE_CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_200P       |    3.531|         |         |         |
+sysACE_CLK     |    2.517|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock tm/str/PH1Reg
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+tm/str/PH1Reg  |    2.234|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 47.00 secs
+Total CPU time to Xst completion: 46.77 secs
+ 
+--> 
+
+Total memory usage is 357152 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  394 (   0 filtered)
+Number of infos    :   37 (   0 filtered)
+

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<DARoots Version="1" Minor="16">
+	<FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+		<Filter Type="Srcs"/>
+		<File Path="$PPRDIR/../ipcore_dir/blk_mem_gen_paramReg.ngc">
+		</File>
+		<File Path="$PPRDIR/../ipcore_dir/emac_single/example_design/physical/gmii_if.v">
+		</File>
+		<File Path="$PPRDIR/../ipcore_dir/emac_single/example_design/emac_single.v">
+		</File>
+		<File Path="$PPRDIR/../ipcore_dir/emac_single/example_design/client/fifo/tx_client_fifo_8.v">
+		</File>
+		<File Path="$PPRDIR/../ipcore_dir/emac_single/example_design/client/fifo/rx_client_fifo_8.v">
+		</File>
+		<File Path="$PPRDIR/../PUF.v">
+		</File>
+		<File Path="$PPRDIR/../ipcore_dir/emac_single/example_design/emac_single_block.v">
+		</File>
+		<File Path="$PPRDIR/../ipcore_dir/emac_single/example_design/client/fifo/eth_fifo_8.v">
+		</File>
+		<File Path="$PPRDIR/../ipcore_dir/blk_mem_gen_paramReg.v">
+		</File>
+		<File Path="$PPRDIR/../ipcore_dir/blk_mem_gen_outputMem.v">
+		</File>
+		<File Path="$PPRDIR/../ipcore_dir/blk_mem_gen_inputMem.v">
+		</File>
+		<File Path="$PPRDIR/../iobuf.v">
+		</File>
+		<File Path="$PPRDIR/../fifo36Wrapper.v">
+		</File>
+		<File Path="$PPRDIR/../serialTransmitReceive.v">
+		</File>
+		<File Path="$PPRDIR/../ipcore_dir/emac_single/example_design/emac_single_locallink.v">
+		</File>
+		<File Path="$PPRDIR/../ethernetController.v">
+		</File>
+		<File Path="$PPRDIR/../simpleTestModuleOne.v">
+		</File>
+		<File Path="$PPRDIR/../ethernet2BlockMem.v">
+		</File>
+		<File Path="$PPRDIR/../system.v">
+		</File>
+		<Config>
+			<Option Name="DesignMode" Val="RTL"/>
+			<Option Name="TopModule" Val="system"/>
+			<Option Name="ConstrsType" Val="UCF"/>
+			<Option Name="SrcSet" Val="sources_1"/>
+		</Config>
+	</FileSet>
+</DARoots>
+

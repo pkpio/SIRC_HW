@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk_200</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_CLK_200</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">clkBPLL</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_clk_125_eth_i = PERIOD &quot;clk_125_eth_i&quot; TS_CLK_200 / 0.625 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">clk_200</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_CLK_200</arg>&apos;, was traced into <arg fmt="%s" index="4">PLL_ADV</arg> instance <arg fmt="%s" index="5">clkBPLL</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">PLL_ADV</arg> output(s): 
+<arg fmt="%s" index="7">CLKOUT1</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_clk_user_interface_i = PERIOD &quot;clk_user_interface_i&quot; TS_CLK_200 / 0.833333333 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1345" delta="old" >The constraint <arg fmt="%s" index="1">&lt;TIMESPEC &quot;TS_userRunClearToggle&quot; = FROM &quot;userRunClearTogUS&quot; TO &quot;userRunClearTogCS&quot; 8000 ps DATAPATHONLY;&gt; [ML605.ucf(244)]</arg> is overridden by the constraint <arg fmt="%s" index="2">&lt;TIMESPEC &quot;TS_userRunClearToggle&quot; = FROM &quot;userRunSetTogCS&quot; TO &quot;userRunSetTogUS&quot; 8000 ps DATAPATHONLY;&gt; [ML605.ucf(247)]</arg>. The overriden constraint usually comes from the input netlist or ncf files. Please set XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1345" delta="old" >The constraint <arg fmt="%s" index="1">&lt;TIMESPEC &quot;TS_userRunClearToggle&quot; = FROM &quot;userRunSetTogCS&quot; TO &quot;userRunSetTogUS&quot; 8000 ps DATAPATHONLY;&gt; [ML605.ucf(247)]</arg> is overridden by the constraint <arg fmt="%s" index="2">&lt;TIMESPEC &quot;TS_userRunClearToggle&quot; = FROM &quot;userRunSetTogCS&quot; TO &quot;userRunSetTogUS&quot; 8000 ps DATAPATHONLY;&gt; [ML605.ucf(251)]</arg>. The overriden constraint usually comes from the input netlist or ncf files. Please set XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="488" delta="old" >Attribute value &quot;<arg fmt="%s" index="1">CLKFBOUT</arg>&quot; is not an accepted value for attribute &quot;<arg fmt="%s" index="2">CLK_FEEDBACK</arg>&quot; on &quot;<arg fmt="%s" index="3">clkBPLL</arg>&quot;.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="488" delta="old" >Attribute value &quot;<arg fmt="%s" index="1">CLKFBOUT</arg>&quot; is not an accepted value for attribute &quot;<arg fmt="%s" index="2">CLK_FEEDBACK</arg>&quot; on &quot;<arg fmt="%s" index="3">E2M/EC/clkBPLL</arg>&quot;.
+</msg>
+
+</messages>
+

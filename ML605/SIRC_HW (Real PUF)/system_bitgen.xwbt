@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\system.ncd
+OUTFILE=C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)\system.bit
+FAMILY=Virtex6
+PART=xc6vlx240t-1ff1156
+WORKINGDIR=C:\Users\praveen\Xilinx work\Dropbox\Rice Internship work\Farinaz - Low power high speed PUFs\PUF testing code\SIRC_HW\ML605\SIRC_HW (Real PUF)
+LICENSE=ISE
+USER_INFO=210672414_207303275_210547154_941

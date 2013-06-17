@@ -1,0 +1,273 @@
+Release 13.2 Map O.61xd (nt64)
+Xilinx Map Application Log File for Design 'system'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o system_map.ncd system.ngd system.pcf 
+Target Device  : xc6vlx240t
+Target Package : ff1156
+Target Speed   : -1
+Mapper Version : virtex6 -- $Revision: 1.55 $
+Mapped Date    : Mon Jun 17 17:29:11 2013
+
+Mapping design into LUTs...
+Running directed packing...
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B10/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B11/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B12/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B13/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B14/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B15/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B0/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B1/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B2/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B3/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B4/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B5/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B6/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B7/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B8/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+WARNING:Pack:2515 - The LUT-1 inverter
+   "E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0" failed to join the OLOGIC
+   comp matched to output buffer "E2M/EC/sysACEIO/IOBUF_B9/OBUFT".  This may
+   result in suboptimal timing.  The LUT-1 inverter
+   E2M/EC/sysACE_MPOE_sysACE_MPCE_AND_66_o1_INV_0 drives multiple loads.
+Running delay-based LUT packing...
+Updating timing models...
+WARNING:Timing:3223 - Timing constraint TS_tx_fifo_rd_to_wr = MAXDELAY FROM TIMEGRP "tx_fifo_rd_to_wr" TO TIMEGRP "emac_single_clk_ref_gtx"
+   8 ns DATAPATHONLY ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_tx_fifo_wr_to_rd = MAXDELAY FROM TIMEGRP "tx_fifo_wr_to_rd" TO TIMEGRP "emac_single_clk_ref_gtx"
+   8 ns DATAPATHONLY ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint TS_rx_fifo_wr_to_rd = MAXDELAY FROM TIMEGRP "rx_fifo_wr_to_rd" TO TIMEGRP "emac_single_clk_ref_gtx"
+   8 ns DATAPATHONLY ignored during timing analysis.
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 33 secs 
+Total CPU  time at the beginning of Placer: 32 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:8201d0de) REAL time: 39 secs 
+
+Phase 2.7  Design Feasibility Check
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: sysACE_MPDATA<15>
+   	 Comp: sysACE_MPDATA<14>
+   	 Comp: sysACE_MPDATA<13>
+   	 Comp: sysACE_MPDATA<12>
+   	 Comp: sysACE_MPDATA<11>
+   	 Comp: sysACE_MPDATA<10>
+   	 Comp: sysACE_MPDATA<9>
+   	 Comp: sysACE_MPDATA<8>
+
+INFO:Place:834 - Only a subset of IOs are locked. Out of 68 IOs, 53 are locked
+   and 15 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+Phase 2.7  Design Feasibility Check (Checksum:8201d0de) REAL time: 40 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:d87e3de4) REAL time: 40 secs 
+
+Phase 4.37  Local Placement Optimization
+Phase 4.37  Local Placement Optimization (Checksum:d87e3de4) REAL time: 40 secs 
+
+Phase 5.2  Initial Placement for Architecture Specific Features
+....
+Phase 5.2  Initial Placement for Architecture Specific Features (Checksum:9d263328) REAL time: 46 secs 
+
+Phase 6.36  Local Placement Optimization
+Phase 6.36  Local Placement Optimization (Checksum:9d263328) REAL time: 46 secs 
+
+Phase 7.30  Global Clock Region Assignment
+Phase 7.30  Global Clock Region Assignment (Checksum:9d263328) REAL time: 46 secs 
+
+Phase 8.3  Local Placement Optimization
+...
+Phase 8.3  Local Placement Optimization (Checksum:7f10f6aa) REAL time: 47 secs 
+
+Phase 9.5  Local Placement Optimization
+Phase 9.5  Local Placement Optimization (Checksum:7f10f6aa) REAL time: 47 secs 
+
+Phase 10.8  Global Placement
+...........................................
+..........................................................................................................................................................
+...............................................................................................................
+................................
+Phase 10.8  Global Placement (Checksum:e0ead1da) REAL time: 59 secs 
+
+Phase 11.5  Local Placement Optimization
+Phase 11.5  Local Placement Optimization (Checksum:e0ead1da) REAL time: 59 secs 
+
+Phase 12.18  Placement Optimization
+Phase 12.18  Placement Optimization (Checksum:b0056ebc) REAL time: 1 mins 9 secs 
+
+Phase 13.5  Local Placement Optimization
+Phase 13.5  Local Placement Optimization (Checksum:b0056ebc) REAL time: 1 mins 9 secs 
+
+Phase 14.34  Placement Validation
+Phase 14.34  Placement Validation (Checksum:18667dda) REAL time: 1 mins 9 secs 
+
+Total REAL time to Placer completion: 1 mins 9 secs 
+Total CPU  time to Placer completion: 1 mins 8 secs 
+Running post-placement packing...
+Writing output files...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:   20
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,773 out of 301,440    1%
+    Number used as Flip Flops:               1,773
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      2,900 out of 150,720    1%
+    Number used as logic:                    2,865 out of 150,720    1%
+      Number using O6 output only:           2,326
+      Number using O5 output only:             171
+      Number using O5 and O6:                  368
+      Number used as ROM:                        0
+    Number used as Memory:                      15 out of  58,400    1%
+      Number used as Dual Port RAM:              0
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:            15
+        Number using O6 output only:            11
+        Number using O5 output only:             0
+        Number using O5 and O6:                  4
+    Number used exclusively as route-thrus:     20
+      Number with same-slice register load:      9
+      Number with same-slice carry load:        11
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,116 out of  37,680    2%
+  Number of LUT Flip Flop pairs used:        3,218
+    Number with an unused Flip Flop:         1,506 out of   3,218   46%
+    Number with an unused LUT:                 318 out of   3,218    9%
+    Number of fully used LUT-FF pairs:       1,394 out of   3,218   43%
+    Number of unique control sets:              67
+    Number of slice register sites lost
+      to control set restrictions:             216 out of 301,440    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        68 out of     600   11%
+    Number of LOCed IOBs:                       53 out of      68   77%
+    IOB Flip Flops:                             21
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                 37 out of     416    8%
+    Number using RAMB36E1 only:                 37
+    Number using FIFO36E1 only:                  0
+  Number of RAMB18E1/FIFO18E1s:                  2 out of     832    1%
+    Number using RAMB18E1 only:                  0
+    Number using FIFO18E1 only:                  2
+  Number of BUFG/BUFGCTRLs:                      5 out of      32   15%
+    Number used as BUFGs:                        5
+    Number used as BUFGCTRLs:                    0
+  Number of ILOGICE1/ISERDESE1s:                10 out of     720    1%
+    Number used as ILOGICE1s:                   10
+    Number used as ISERDESE1s:                   0
+  Number of OLOGICE1/OSERDESE1s:                12 out of     720    1%
+    Number used as OLOGICE1s:                   12
+    Number used as OSERDESE1s:                   0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of     144    0%
+  Number of BUFIODQSs:                           0 out of      72    0%
+  Number of BUFRs:                               0 out of      36    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     768    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of GTXE1s:                              0 out of      20    0%
+  Number of IBUFDS_GTXE1s:                       0 out of      12    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         1 out of      18    5%
+  Number of IODELAYE1s:                         10 out of     720    1%
+  Number of MMCM_ADVs:                           2 out of      12   16%
+  Number of PCIE_2_0s:                           0 out of       2    0%
+  Number of STARTUPs:                            1 out of       1  100%
+  Number of SYSMONs:                             0 out of       1    0%
+  Number of TEMAC_SINGLEs:                       1 out of       4   25%
+
+Average Fanout of Non-Clock Nets:                5.19
+
+Peak Memory Usage:  818 MB
+Total REAL time to MAP completion:  1 mins 13 secs 
+Total CPU time to MAP completion:   1 mins 12 secs 
+
+Mapping completed.
+See MAP report file "system_map.mrp" for details.

@@ -4,6 +4,9 @@ SIRC_HW
 Implementation of SIRC, hardware end code for a Xilinx virtex 5 XUPV5 and virtex 6 ML605 devices inside folders. This project has separate works which are made to work with both actual hardware PUF and software PUF. PUF - Physically Unclonable Function.
 
 
+Network configuration
+
+
 1. Disable Realtek PCI (or Broadcom) network. Only one of them but not both. It worked for me with Realtek disabled
 2. Check if LAN wire is connected to Broadcom
 3. IPv4 settings for Broadcom
